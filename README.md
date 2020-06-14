@@ -3,8 +3,9 @@
 ---
 
 ## Collaborators
-* Anna Vu *
-* Christina Tarango *
-* Jaclyn Hardy *
+* Anna Vu
+* Christina Tarango
+* Jaclyn Hardy
 ---
 
+https://jmh947.github.io/wiggle_tail/.
