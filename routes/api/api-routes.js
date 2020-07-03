@@ -16,6 +16,17 @@ const petSitterController = require("../../controllers/petSitterController")
     .post(petController.create)
     //Server request to GET all the pet from this owner
     .get(petController.findAll)
+    //Server request to remove the pet 
+    .delete(petController.remove)
+
+    router.route("/:id")
+    //Server request to insert sitter data to the database
+    .post(petSitterController.create)
+    //Server request to get pet sitter info 
+    .get(petSitterController.findById)
+    //Server request to remove the pet sitter
+    .delete(petSitterController.remove)
+
    
 
     
