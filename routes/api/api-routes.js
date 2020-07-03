@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const ownerController = require("../../controllers/ownerController")
 const petController = require("../../controllers/petController")
-
+const petSitterController = require("../../controllers/petSitterController")
 
     router.route("/:id")
     //Server request to insert owner data to the database

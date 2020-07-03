@@ -7,4 +7,7 @@ router.use("/ownerprofile", allApiRoutes);
 //Pet Route
 router.use("/petprofile", allApiRoutes)
 
+//Pet Sitter Route
+router.use("/petsitterprofile", allApiRoutes)
+
 module.exports = router;
