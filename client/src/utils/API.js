@@ -3,12 +3,12 @@ import axios from "axios";
 export default {
 
     // User's input information
-    signUp : function(userInfo) {
+    addOwnerInfo : function(userInfo) {
         return axios.post("/api/ownerprofile", userInfo).then(result => result.data);
     },
 
     //User login
-    LogIn: function(id) {
+    getOwnerInfo: function(id) {
         return axios.get("/api/ownerprofile" + id)
         .then(result => result.data);
     },
@@ -24,9 +24,24 @@ export default {
     },
 
     // Delete a Pet
-    deleteAPet: function(id) {
+    deletePet: function(id) {
         return axios.delete("/api/petprofile" + id).then(result => result.data);
 
+    },
+
+    // Add a pet sitter
+    addPetSitterInfo : function(sitterInfo) {
+        return axios.post("/api/petsitterprofile", sitterInfo).then(result => result.data);
+    },
+
+    // Get a pet sitter
+    getPetSitterInfo : function (id) {
+        return axios.get("/api/petsitterprofile" + id ).then(result => result.data);
+    },
+
+    //Remove a pet sitter
+    removePetSitter : function(id) {
+        return axios.delete("/api/petsitterprofile" + id).then(result => result.data);
     }
 
 
