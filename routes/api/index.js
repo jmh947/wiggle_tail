@@ -1,13 +1,16 @@
 const router = require("express").Router();
-const allApiRoutes = require("./api-routes");
+const ownerApiRoutes = require("./owner-routes");
+const petApiRoutes = require("./pet-routes");
+const petsitterApiRoutes = require("./petsitter-routes");
+
 
 // Owner Route
-router.use("/ownerprofile", allApiRoutes);
+router.use("/ownerprofile", ownerApiRoutes);
 
 //Pet Route
-router.use("/petprofile", allApiRoutes)
+router.use("/petprofile", petApiRoutes)
 
 //Pet Sitter Route
-router.use("/petsitterprofile", allApiRoutes)
+router.use("/petsitterprofile", petsitterApiRoutes)
 
 module.exports = router;

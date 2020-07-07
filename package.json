@@ -1,33 +1,28 @@
 {
   "name": "wiggle_tail",
   "version": "1.0.0",
-  "description": "---",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jmh947/wiggle_tail.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jmh947/wiggle_tail/issues"
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
-  "homepage": "https://github.com/jmh947/wiggle_tail#readme",
   "dependencies": {
-    "axios": "^0.19.2",
-    "cheerio": "^1.0.0-rc.3",
-    "config.json": "0.0.4",
-    "express": "^4.17.1",
-    "if-env": "^1.0.4",
-    "mongojs": "^3.1.0",
-    "mongoose": "^5.9.20",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.1.0",
-    "react": "^16.13.1",
-    "sequelize": "^6.2.3"
+    "axios": "^0.16.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.17",
+    "if-env": "^1.0.4"
   }
 }
