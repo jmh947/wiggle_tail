@@ -2,7 +2,7 @@ const db = require ("../models")
 
 module.exports = {
     
-    // User Input
+    // Pet input
     create : function(req, res) {
         console.log(req.body)
         db.Pet
@@ -10,7 +10,7 @@ module.exports = {
         .then(dbOwner => res.json(dbOwner))
     },
 
-    // Get all user info
+    // Get a pet info
     findById: function(req,res) {
         db.Pet
         .findById(req.params.id)
@@ -18,7 +18,7 @@ module.exports = {
         .catch(err => status(422).json(err))
     },
 
-    // Get all user info
+    // Get all pet info
     findAll: function(req,res) {
         db.Pet
         .find()
@@ -26,7 +26,7 @@ module.exports = {
         .catch(err => status(422).json(err))
     },
 
-     // Get all user info
+     // Remove a pet
      remove: function(req,res) {
         db.Pet
         .remove({_id: req.params.id})
@@ -34,7 +34,7 @@ module.exports = {
         .catch(err => status(422).json(err))
     },
 
-    // Get all user info
+    // Update a pet
     update: function(req,res) {
         db.Pet
        .update({_id: req.params.id})

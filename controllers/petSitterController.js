@@ -2,43 +2,43 @@ const db = require ("../models")
 
 module.exports = {
     
-   // User Input
+   // Pet sitter Input
    create : function(req, res) {
     console.log(req.body)
-    db.petSitter
+    db.Sitter
     .create(req.body)
-    .then(dbOwner => res.json(dbOwner))
+    .then(dbOwner => res.json(dbSitter))
 },
 
-// Get all user info
+// Get a sitter info
 findById: function(req,res) {
-    db.petSitter
+    db.Sitter
     .findById(req.params.id)
-    .then(dbOwner => res.json(dbOwner))
+    .then(dbOwner => res.json(dbSitter))
     .catch(err => status(422).json(err))
 },
 
-// Get all user info
+// Get all pet sitter info
 findAll: function(req,res) {
-    db.petSitter
+    db.Sitter
     .find()
-    .then(dbOwner => res.json(dbOwner))
+    .then(dbOwner => res.json(dbSitter))
     .catch(err => status(422).json(err))
 },
 
- // Get all user info
+ // Remove a pet sitter
  remove: function(req,res) {
-    db.petSitter
+    db.Sitter
     .remove({_id: req.params.id})
-    .then(dbOwner => res.json(dbOwner))
+    .then(dbOwner => res.json(dbSitter))
     .catch(err => status(422).json(err))
 },
 
-// Get all user info
+// update a pet sitter
 update: function(req,res) {
-    db.petSitter
+    db.Sitter
    .update({_id: req.params.id})
-   .then(dbOwner => res.json(dbOwner))
+   .then(dbOwner => res.json(dbSitter))
    .catch(err => status(422).json(err))
 }
 
