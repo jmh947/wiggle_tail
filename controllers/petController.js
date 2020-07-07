@@ -2,7 +2,7 @@ const db = require ("../models")
 
 module.exports = {
     
-    // Pet Input
+    // User Input
     create : function(req, res) {
         console.log(req.body)
         db.Pet
@@ -10,7 +10,7 @@ module.exports = {
         .then(dbOwner => res.json(dbOwner))
     },
 
-    // Get all user's pet info
+    // Get all user info
     findById: function(req,res) {
         db.Pet
         .findById(req.params.id)
@@ -18,14 +18,29 @@ module.exports = {
         .catch(err => status(422).json(err))
     },
 
-    // Remove a pet
-    remove: function (req,res){
+    // Get all user info
+    findAll: function(req,res) {
         db.Pet
-        .findById( {_id: req.params.id} )
-        .then( deletedPet => deletedPet.remove() )
-        .then(deletedPet => res.json(deletedPet))
-        .catch(err => res.status(422).json(err))
-    }
+        .find()
+        .then(dbOwner => res.json(dbOwner))
+        .catch(err => status(422).json(err))
+    },
+
+     // Get all user info
+     remove: function(req,res) {
+        db.Pet
+        .remove({_id: req.params.id})
+        .then(dbOwner => res.json(dbOwner))
+        .catch(err => status(422).json(err))
+    },
+
+    // Get all user info
+    update: function(req,res) {
+        db.Pet
+       .update({_id: req.params.id})
+       .then(dbOwner => res.json(dbOwner))
+       .catch(err => status(422).json(err))
+   }
 
 }
 
