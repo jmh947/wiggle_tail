@@ -14,6 +14,6 @@ const ownerProfile = new Schema ({
 
 })
 
-let Owner = mongoose.model("Owner", userProfile);
+let Owner = mongoose.model("Owner", ownerProfile);
 
 module.exports = Owner; 
