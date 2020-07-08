@@ -4,11 +4,6 @@ let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4U2NJd0ZpaEdG
 
 export default {
 
-    //API query to pet finder
-    getAnimals : function(query) {
-        return axios.get("https://api.petfinder.com/v2/animals?")
-    },
-
     // User's input information
     addOwnerInfo : function(userInfo) {
         return axios.post("/api/ownerprofile", userInfo).then(result => result.data);
