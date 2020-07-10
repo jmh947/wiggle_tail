@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 
 // class SitterResult extends Component {
 
@@ -57,4 +57,5 @@ function SitterResult (props) {
         )
 }
 
+export default SitterResult;
 
