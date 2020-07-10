@@ -42,8 +42,12 @@ export default {
     //Remove a pet sitter
     removePetSitter : function(id) {
         return axios.delete("/api/petsitterprofile" + id).then(result => result.data);
-    }
+    },
 
+   //fetch pet finder api info
+   getPetFinder : function(id) {
+    return axios.get("/api/petfinder").then(result => result.data);
+}
 
 
 }
