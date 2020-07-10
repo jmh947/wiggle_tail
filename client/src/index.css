@@ -24,7 +24,9 @@ form {
   padding: 20px;
   margin-top: 20px;
 }
-
+.card {
+background-color: ghostwhite;
+}
 form button, form h5{
   margin: 20px 0;
 }
