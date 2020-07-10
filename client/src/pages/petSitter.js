@@ -58,6 +58,9 @@ class petSitter extends React.Component {
         )
     }
 
+}
+export default petSitter;
+
 
 
 
