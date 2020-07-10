@@ -18,7 +18,7 @@ function SitterResult (props) {
     //     .catch(err => console.log(err))
     // }
 
-    render () {
+    
         return(
             <div>
                 <div>
@@ -55,7 +55,6 @@ function SitterResult (props) {
                 </div>
             </div>
         )
-    }
 }
 
 
