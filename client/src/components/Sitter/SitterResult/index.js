@@ -1,27 +1,28 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 
-class SitterResult extends Component {
+// class SitterResult extends Component {
 
-    //Initialize State
-    state ={
-        petSitter : []
+function SitterResult (props) {
+    // //Initialize State
+    // state ={
+    //     petSitter : []
         
-    }
+    // }
 
-    // Render the data from the API request
-    componentDidMount () {
-        API.getPetSitterInfo()
-        .then(sitterInfo => this.setState({ petSitter: sitterInfo})
-        )
-        .catch(err => console.log(err))
-    }
+    // // Render the data from the API request
+    // componentDidMount () {
+    //     API.getAllPetSitter()
+    //     .then(sitterInfo => this.setState({ petSitter: sitterInfo})
+    //     )
+    //     .catch(err => console.log(err))
+    // }
 
     render () {
         return(
             <div>
                 <div>
-                    {this.props.sitters.map(result => (
+                    {this.props.Sitter.map(result => (
                        <div className="card mb-3" key={result._id}>
                            <div className = "row">
 
@@ -40,6 +41,10 @@ class SitterResult extends Component {
                                         <h5>{result.phoneNumber}</h5>
                                         <h5>{result.wage}</h5>
                                         <h5>{result.description}</h5>
+                                        <h5>{result.Boarding}</h5>
+                                        <h5>{result.Stay_at_home}</h5>
+                                        <h5>{result.Walks}</h5>
+                                        <h5>{result.Daycare}</h5>
                                     </div>
                                 </div>
 

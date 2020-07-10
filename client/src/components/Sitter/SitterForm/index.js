@@ -7,8 +7,10 @@ function SitterForm (props) {
         <div className = "container">
             <form>
                 {/* First name */}
-                <input 
-                    name = "name"
+                <input
+                    onChange = {props.handleInputChange}
+                    value = {props.search} 
+                    name = "fisrtname"
                     type = "text"
                     className = "form-control"
                     placeholder = "First Name"
@@ -17,7 +19,9 @@ function SitterForm (props) {
 
                     {/* Last name */}
                 <input 
-                    name = "name"
+                    onChange = {props.handleInputChange}
+                    value = {props.search} 
+                    name = "lastname"
                     type = "text"
                     className = "form-control"
                     placeholder = "Last Name"
@@ -25,6 +29,8 @@ function SitterForm (props) {
                     />
                 {/* Email */}
                 <input 
+                    onChange = {props.handleInputChange}
+                    value = {props.search} 
                     name = "email"
                     type = "text"
                     className = "form-control"
@@ -34,7 +40,9 @@ function SitterForm (props) {
 
                 {/* Zipcode */}
                 <input 
-                    name = "number"
+                    onChange = {props.handleInputChange}
+                    value = {props.search} 
+                    name = "zipcode"
                     type = "text"
                     className = "form-control"
                     placeholder = "Zipcode"
@@ -43,6 +51,8 @@ function SitterForm (props) {
 
                 {/* Phone*/}
                 <input 
+                    onChange = {props.handleInputChange}
+                    value = {props.search} 
                     name = "phone"
                     type = "text"
                     className = "form-control"
@@ -52,6 +62,8 @@ function SitterForm (props) {
 
                 {/* Service Charge*/}
                 <input 
+                    onChange = {props.handleInputChange}
+                    value = {props.search} 
                     name = "charge"
                     type = "text"
                     className = "form-control"
@@ -60,6 +72,8 @@ function SitterForm (props) {
                     />
                 {/* Tell us about you */}
                 <input 
+                    onChange = {props.handleInputChange}
+                    value = {props.search} 
                     name = "aboutyou"
                     type = "text"
                     className = "form-control"
@@ -70,38 +84,66 @@ function SitterForm (props) {
                 {/* Options */}
                 {/* Boarding */}
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label class="form-check-label" for="defaultCheck1">
-                     Boarding
-                    </label>
+                    
+                    <input 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    value = {props.search}  
+                    id="defaultCheck1"/>
+
+                        <label class="form-check-label" for="defaultCheck1">
+                        Boarding
+                        </label>
                 </div> 
 
                 {/* Stay at home */}
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label class="form-check-label" for="defaultCheck1">
-                     Stay at Home
-                    </label>
+                    <input 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    value = {props.search}  
+                    id="defaultCheck1"/>
+                    
+                        <label class="form-check-label" for="defaultCheck1">
+                        Stay at Home
+                        </label>
                 </div>
 
                 {/* Walks */}
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label class="form-check-label" for="defaultCheck1">
-                     Walks
-                    </label>
+
+                    <input 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    value = {props.search}  
+                    id="defaultCheck1"/>
+
+                        <label class="form-check-label" for="defaultCheck1">
+                        Walks
+                        </label>
                 </div>
 
                 {/* Daycare */}
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-                    <label class="form-check-label" for="defaultCheck1">
-                    Daycare
-                    </label>
+
+                    <input 
+                    class="form-check-input" 
+                    type="checkbox" 
+                    value = {props.search} 
+                    id="defaultCheck1"/>
+                    
+                        <label class="form-check-label" for="defaultCheck1">
+                        Daycare
+                        </label>
                 </div>
 
                 {/* Submit Btn */}
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button 
+                type="submit" 
+                class="btn btn-primary"
+                onClick = {props.handleFormSubmit}>
+                    Submit
+                </button>
 
             </form>
         </div>
