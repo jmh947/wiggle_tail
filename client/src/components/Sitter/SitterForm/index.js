@@ -100,6 +100,9 @@ function SitterForm (props) {
                     </label>
                 </div>
 
+                {/* Submit Btn */}
+                <button type="submit" class="btn btn-primary">Submit</button>
+
             </form>
         </div>
     )
