@@ -36,8 +36,13 @@ export default {
         return axios.post("/api/petsitterprofile", sitterInfo).then(result => result.data);
     },
 
+    //get all pet sitter
+    getAllPetSitter : function(sitterInfo) {
+        return axios.get("/api/petsitterprofile").then(result => result.data);
+    },
+
     // Get a pet sitter
-    getPetSitterInfo : function (id) {
+    getAPetSitterInfo : function (id) {
         return axios.get("/api/petsitterprofile" + id ).then(result => result.data);
     },
 
