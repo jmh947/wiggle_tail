@@ -10,6 +10,7 @@ import CreatePost from './components/posts/CreatePost';
 import petFinder1 from './components/petFinder/petFinder';
 
 import petSitter from "./pages/petSitter";
+import SitterForm from "./components/Sitter/SitterForm"
 
 
 
@@ -27,6 +28,7 @@ function App() {
    <Route path='/petfinder1' component={petFinder1} />
 
    <Route path='/searchsitter' component ={petSitter} />
+   <Route path='/sittersignup' component ={SitterForm} />
  </Switch>
   
     </div>
