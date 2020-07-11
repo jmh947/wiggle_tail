@@ -38,17 +38,20 @@ export default {
 
     //get all pet sitter
     getAllPetSitter : function(sitterInfo) {
-        return axios.get("/api/petsitterprofile").then(result => result.data);
+        return axios.get("/api/petsitterprofile")
+        // .then(result => result.data);
+
+        console.log("getting pet sitter")
     },
 
     // Get a pet sitter
     getAPetSitterInfo : function (id) {
-        return axios.get("/api/petsitterprofile" + id ).then(result => result.data);
+        return axios.get("/api/petsitterprofile/" + id ).then(result => result.data);
     },
 
     //Remove a pet sitter
     removePetSitter : function(id) {
-        return axios.delete("/api/petsitterprofile" + id).then(result => result.data);
+        return axios.delete("/api/petsitterprofile/" + id).then(result => result.data);
     },
 
    //fetch pet finder api info
