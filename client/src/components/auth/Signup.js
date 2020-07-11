@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import { Redirect} from "react-router-dom"
 import {connect} from "react-redux"
 import {signUp} from "../../store/actions/authActions"
+import API from "../../utils/API"
  class SignUp extends Component {
      state = {
 email:"",
 password:"",
 firstName:"",
 lastName:"",
-userZipcode:"",
+zipcode:"",
 hasPet:""
      }
 
@@ -20,8 +21,18 @@ handleChange = (e)=>{
 }
 handleSubmit = (e)=>{
     e.preventDefault();
-    // console.log(this.state)
+    console.log(this.state, "user")
     this.props.signUp(this.state)
+    const owner = {
+        firstName:this.state.firstName,
+lastName:this.state.lastName,
+userZipcode:this.state.zipcode,
+hasPet:this.state.hasPet==="on" ? true:false
+    }
+API.addOwnerInfo (owner).then(results=>{
+    console.log(results)
+})
+
 }
 
 
