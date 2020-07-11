@@ -4,10 +4,13 @@ import SearchSitter from "../components/Sitter/SearchSitter";
 import SitterResult from "../components/Sitter/SitterResult";
 
 class petSitter extends React.Component {
+    constructor(props) {
+        super(props)
 
-    state = {
-        values : "",
-        matchedPetSitters : []
+        this.state = {
+            values : "",
+            matchedPetSitters : []
+        }
     }
 
     componentDidMount () {
@@ -61,26 +64,5 @@ class petSitter extends React.Component {
 }
 export default petSitter;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 
 
