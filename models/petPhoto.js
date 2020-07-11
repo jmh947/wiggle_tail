@@ -13,7 +13,7 @@ const petPhoto = new Schema ({
 })
 
 //Assign name and structure to the Photo collection
-let Photo = mongoose.model("Photo", petPhoto); 
+let petPhoto = mongoose.model("petPhoto", petPhoto); 
 
-module.exports = Photo;
+module.exports = petPhoto;
  
