@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { petSitter } from "../../../pages/petSitter";
+//import Sitter from "../../../../../models/sitter";
+
 // import API from "../../../utils/API";
 
 // class SitterResult extends Component {
@@ -36,8 +39,9 @@ function SitterResult (props) {
                                 {/* Sitter Info Section */}
                                 <div className="col-md-10">
                                     <div className="card-body">
-                                        <h5></h5>
-                                        {/* <h5>{result.lastName}</h5>
+                                        <h5>Does this work</h5>
+                                        
+                                        {/* <h5>{results.lastName}</h5>
                                         <h5>{result.sitterZipcode}</h5>
                                         <h5>{result.email}</h5>
                                         <h5>{result.phoneNumber}</h5>

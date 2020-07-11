@@ -1,7 +1,12 @@
 h2 {
     color:rgb(61, 61, 61);
+    background-color: rgb(233, 217, 196);
+}
+
+#searchZipcode {
+    background-color: rgb(233, 217, 196);
 }
 
 .sitter-signup {
-    margin-left: 100px;
+    margin-left: 150px;
 }
