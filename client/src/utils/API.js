@@ -51,10 +51,11 @@ export default {
         return axios.delete("/api/petsitterprofile" + id).then(result => result.data);
     },
 
-   //fetch pet finder api info
-   getPetFinder : function(id) {
-    return axios.get("/api/petfinder").then(result => result.data);
-}
+   //fetch pet finder api infos
+    //fetch pet finder api info
+    getPetFinder : function(petSearch) {
+        return axios.get("/api/petfinder", {params:petSearch}).then(result => result.data);
+    }
 
 
 }
