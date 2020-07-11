@@ -5,7 +5,7 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/wiggletails"
 );
 
 const sitterSeed = [
@@ -93,7 +93,7 @@ const sitterSeed = [
 
 db.Sitter
   .remove({})
-  .then(() => db.Sitter.collection.insertMany(sitterSeed))
+  .then(() => db.Sitter.insertMany(sitterSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

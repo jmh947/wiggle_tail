@@ -7,14 +7,14 @@ module.exports = {
     console.log(req.body)
     db.Sitter
     .create(req.body)
-    .then(dbOwner => res.json(dbSitter))
+    .then(dbSitter => res.json(dbSitter))
 },
 
 // Get a sitter info
 findById: function(req,res) {
     db.Sitter
     .findById(req.params.id)
-    .then(dbOwner => res.json(dbSitter))
+    .then(dbSitter => res.json(dbSitter))
     .catch(err => status(422).json(err))
 },
 
@@ -22,7 +22,7 @@ findById: function(req,res) {
 findAll: function(req,res) {
     db.Sitter
     .find()
-    .then(dbOwner => res.json(dbSitter))
+    .then(dbSitter => res.json(dbSitter))
     .catch(err => status(422).json(err))
 },
 
@@ -30,7 +30,7 @@ findAll: function(req,res) {
  remove: function(req,res) {
     db.Sitter
     .remove({_id: req.params.id})
-    .then(dbOwner => res.json(dbSitter))
+    .then(dbSitter => res.json(dbSitter))
     .catch(err => status(422).json(err))
 },
 
@@ -38,7 +38,7 @@ findAll: function(req,res) {
 update: function(req,res) {
     db.Sitter
    .update({_id: req.params.id})
-   .then(dbOwner => res.json(dbSitter))
+   .then(dbSitter => res.json(dbSitter))
    .catch(err => status(422).json(err))
 }
 

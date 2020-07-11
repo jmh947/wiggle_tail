@@ -17,7 +17,8 @@ class petSitter extends React.Component {
 
     componentDidMount () {
         API.getAllPetSitter()
-        .then(sitterInfo => this.setState({ matchedPetSitters : sitterInfo})
+        .then(sitterInfo => console.log(sitterInfo)
+            // this.setState({ matchedPetSitters : sitterInfo})
         )
         .catch(err => console.log(err))
     }
@@ -44,7 +45,7 @@ class petSitter extends React.Component {
 
          // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
-        this.searchPetSitter(this.state.search) // "search" is found as name in the sitterform.js
+        // this.searchPetSitter(this.state.search) // "search" is found as name in the sitterform.js
     }
 
     render () {

@@ -1,4 +1,7 @@
-import React from "react";
+import React from "react"
+
+// import React, { Component } from "react";
+// import Checkbox from "../../checkboxes"
 
 function SitterForm (props) {
 
@@ -130,9 +133,9 @@ function SitterForm (props) {
                     class="form-check-input" 
                     type="checkbox" 
                     value = {props.search} 
-                    id="defaultCheck1"/>
+                    id="defaultCheck2"/>
                     
-                        <label class="form-check-label" for="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck2">
                         Daycare
                         </label>
                 </div>

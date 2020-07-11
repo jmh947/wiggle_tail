@@ -1,5 +1,7 @@
 import React from "react";
-import "./style.css"
+import SitterForm from "../SitterForm"
+import "./style.css";
+
 
 function SearchSitter (props){
 
@@ -7,7 +9,7 @@ function SearchSitter (props){
         <div className = "container">
             <form>
                 <div className = "form-group">
-                <form>
+                {/* <form> */}
                     <label htmlFor = "search">
                         <h2><b>Find You Pets a New Best Friend Through Our Trusted Pet Sitter Finder</b></h2>
                     </label>
@@ -28,7 +30,18 @@ function SearchSitter (props){
                     > 
                     Search Your Area
                     </button>
-                    </form>
+
+                    
+                    <a href ="/sittersignup">
+                        <p
+                        // onClick = {props.handleFormSubmit}
+                        className = "sitter-signup btn btn-dark mt-3 mb-5"
+                        > 
+                        Sign Up To Be A Pet Sitter
+                        </p>
+                    </a>
+
+                    {/* </form> */}
 
 
                 </div>
