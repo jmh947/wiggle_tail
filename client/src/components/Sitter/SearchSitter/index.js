@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 function SearchSitter (props){
 
@@ -6,9 +7,9 @@ function SearchSitter (props){
         <div className = "container">
             <form>
                 <div className = "form-group">
-
+                <form>
                     <label htmlFor = "search">
-                        <h2>Find You Pets a New Best Friend Through Our Trusted Pet Sitter Finder</h2>
+                        <h2><b>Find You Pets a New Best Friend Through Our Trusted Pet Sitter Finder</b></h2>
                     </label>
 
                     <input 
@@ -27,6 +28,7 @@ function SearchSitter (props){
                     > 
                     Search Your Area
                     </button>
+                    </form>
 
 
                 </div>

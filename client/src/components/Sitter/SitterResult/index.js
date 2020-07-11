@@ -36,7 +36,7 @@ function SitterResult (props) {
                                 {/* Sitter Info Section */}
                                 <div className="col-md-10">
                                     <div className="card-body">
-                                        <h5>haha</h5>
+                                        <h5></h5>
                                         {/* <h5>{result.lastName}</h5>
                                         <h5>{result.sitterZipcode}</h5>
                                         <h5>{result.email}</h5>

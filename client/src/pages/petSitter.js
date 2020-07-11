@@ -54,10 +54,10 @@ class petSitter extends React.Component {
                 <SearchSitter
                     search = {this.state.search}
                     handleInputChange = {this.handleInputChange}
-                    handleFormSubmit = {this.handleFOrmSubmit} />
+                    handleFormSubmit = {this.handleFormSubmit} />
 
                 <div className = "container">
-                    <h2>Result</h2>
+                    <h2><b>Result</b></h2>
                     <SitterResult 
                         matchedPetSitters = {this.matchedPetSitters} 
                     />

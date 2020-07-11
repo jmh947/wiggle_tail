@@ -11,12 +11,15 @@ const NavBar = (props) => {
 const links = auth.uid ?  <SignedInLinks profile={profile}/>: <SignedOutLinks/>
 
     return (
-        <nav className="nav-wrapper grey darken-3">
-                      <a href="#Main" class="brand-logo"><p><img className = "logo" src={image} /></p></a>
-            <div className="container">    
-            <Link to="/" className="brand-logo">Wiggle Tails</Link>
+        <nav className="nav-wrapper">
+            <a href="/" className="brand-logo"><img className = "logo" src={image} /></a>
             
-       {links}
+            <div className="container">    
+            
+                <Link to="/" className="brand-logo" style={{fontSize : "35px", fontFamily: "'Modak', cursive", color: "orange"}}>Wiggle Tails</Link>
+            
+                {links}
+
             </div>
       
         </nav>

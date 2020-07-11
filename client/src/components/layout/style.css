@@ -1,8 +1,27 @@
 .logo {
     display: inline-block;
-    height: 100%;
+    height: 70%;
+    width: 70%;
 }
 
+.headline {
+    margin-top: 5px;
+    
+    
+}
 .logo>img {
     vertical-align: middle
 }
+
+.brand-logo {
+    width: 220px;
+}
+.nav-wrapper {
+    height: 150px;
+    background-color: #9e523fe7;
+}
+
+.right {
+    font-size: 20px;
+}
+
