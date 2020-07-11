@@ -15,6 +15,7 @@ const links = auth.uid ?  <SignedInLinks profile={profile}/>: <SignedOutLinks/>
                       <a href="#Main" class="brand-logo"><p><img className = "logo" src={image} /></p></a>
             <div className="container">    
             <Link to="/" className="brand-logo">Wiggle Tails</Link>
+            
        {links}
             </div>
       
