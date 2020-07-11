@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
+import API from "../utils/API";
 import SearchSitter from "../components/Sitter/SearchSitter";
 import SitterResult from "../components/Sitter/SitterResult";
 
@@ -11,18 +11,23 @@ class petSitter extends React.Component {
             values : "",
             matchedPetSitters : []
         }
+
+        // this.searchPetSitter = this.searchPetSitter.bind(this);
     }
 
     componentDidMount () {
-        this.searchPetSitter();
-    }
-
-    seachPetSitter = ()=> { // Need to apply filter to find the sitters with matching zipcode
         API.getAllPetSitter()
-        .then(sitterInfo => this.setState({ matchedPetSitters: sitterInfo})
+        .then(sitterInfo => this.setState({ matchedPetSitters : sitterInfo})
         )
         .catch(err => console.log(err))
     }
+
+    // seachPetSitter = () => { // Need to apply filter to find the sitters with matching zipcode
+    //     API.getAllPetSitter()
+    //     .then(sitterInfo => this.setState({ matchedPetSitters : sitterInfo})
+    //     )
+    //     .catch(err => console.log(err))
+    // }
 
     // Handle Input
     handleInputChange = e => {
@@ -38,7 +43,7 @@ class petSitter extends React.Component {
     handleFormSubmit = e => {
 
          // Preventing the default behavior of the form submit (which is to refresh the page)
-        event.preventDefault();
+        e.preventDefault();
         this.searchPetSitter(this.state.search) // "search" is found as name in the sitterform.js
     }
 
@@ -49,10 +54,10 @@ class petSitter extends React.Component {
                 <SearchSitter
                     search = {this.state.search}
                     handleInputChange = {this.handleInputChange}
-                    handleFormSubmit = {this.handleFOrmSubmit} />
+                    handleFormSubmit = {this.handleFormSubmit} />
 
                 <div className = "container">
-                    <h2>Result</h2>
+                    <h2><b>Result</b></h2>
                     <SitterResult 
                         matchedPetSitters = {this.matchedPetSitters} 
                     />

@@ -9,9 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(/image/paw_prints.jpg) no-repeat;
- 
-  background-color:white;
+  /* background: url(/image/paw_prints.jpg) no-repeat; */
+  background-image: url("./img/paw.jpg");
+  /* background-color:orange; */
   min-height: 100%;
 }
 
