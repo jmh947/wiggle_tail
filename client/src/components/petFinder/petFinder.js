@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
+import { compose } from 'redux'
+import { connect } from 'react-redux'
+import { firestoreConnect } from 'react-redux-firebase'
+import { Redirect } from "react-router-dom"
+import Animals from "../Result"
  class petFinder1 extends Component {
      state = {
          animals:[],
@@ -17,29 +22,35 @@ handleChange = (e)=>{
        [e.target.id]:e.target.value
     })
 }
-handleSubmit = (e)=>{ console.log(this.state)
-    e.preventDefault();
-    API.getPetFinder({
-        
-        type: this.state.type, 
-        gender: this.state.gender, 
-        status: "adoptable", 
-        size: this.state.size, 
-        attributes: {spayed_neutered: true}
+handleSubmit = (e)=>{ console.log(this.state, "state")
+e.preventDefault();
+API.getPetFinder({
     
-      })
-        .then(res => this.setState({animals:res.data,
-            type:"",
-   gender:"",
-   size:"",
-   spayed:""
-        }))
-        .catch(err => console.log(err));
+    type: this.state.type, 
+    gender: this.state.gender, 
+    status: "adoptable", 
+    size: this.state.size, 
+    attributes: {spayed_neutered: true}
+
+  })
+    .then(res => 
+      // console.log(res.animals)
+      this.setState({animals:res.animals,
+        type:"",
+gender:"",
+size:"",
+spayed:""
+    })
+    )
+    .catch(err => console.log(err));
 }
 
 
     render() {
+      const { auth} = this.props
+          if (!auth.uid) return <Redirect to="/signin"/>
         return (
+          
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
                     <h5 className="grey-text text-darken-3">Pet Finder</h5>
@@ -73,22 +84,29 @@ handleSubmit = (e)=>{ console.log(this.state)
                         </div>
                     
                 </form>
-                <List>
-                {this.state.animals.map(pet => (
-                  <ListItem key={pet.id}>
-                    {/* <Link to={"/books/" + book._id}> */}
-                      <strong>
-                        {pet.description}
-                      </strong>
-                    {/* </Link> */}
-                    {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
-                  </ListItem>
-                ))}
-              </List>
+                <div className="card-content grey-text text-darken-3">
+          {this.state.animals.length>0 ? this.state.animals.map(animal=>{
+            return (
+                <Animals animal={animal} />
+            )
+          }):"search not found"}
+  
+        </div>
             </div>
       
         )
     }
 }
 
-export default petFinder1;
+const mapStateToProps =(state)=>{
+  console.log (state)
+  return {
+     
+      auth: state.firebase.auth
+    
+  }
+}
+
+export default compose(
+  connect(mapStateToProps)
+)(petFinder1)

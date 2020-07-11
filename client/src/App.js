@@ -6,7 +6,7 @@ import PostDetails from './components/posts/PostDetails';
 import SignUp from './components/auth/Signup';
 import SignIn from './components/auth/Signin';
 import CreatePost from './components/posts/CreatePost';
-import petFinder from './components/petFinder/petFinder0';
+
 import petFinder1 from './components/petFinder/petFinder';
 
 import petSitter from "./pages/petSitter";
@@ -24,7 +24,6 @@ function App() {
    <Route path='/signin' component={SignIn} />
    <Route path='/signup' component={SignUp} />
    <Route path='/createpost' component={CreatePost} />
-   <Route path='/petfinder' component={petFinder} />
    <Route path='/petfinder1' component={petFinder1} />
 
    <Route path='/searchsitter' component ={petSitter} />
