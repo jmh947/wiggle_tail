@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-
+import API from "../../utils/API";
+import { List, ListItem } from "../../components/List";
  class petFinder1 extends Component {
      state = {
+         animals:[],
          type:"",
 gender:"",
 size:"",
 spayed:""
      }
 
+    
 handleChange = (e)=>{
     // console.log(e)
     this.setState({
@@ -16,7 +19,22 @@ handleChange = (e)=>{
 }
 handleSubmit = (e)=>{ console.log(this.state)
     e.preventDefault();
-   
+    API.getPetFinder({
+        
+        type: this.state.type, 
+        gender: this.state.gender, 
+        status: "adoptable", 
+        size: this.state.size, 
+        attributes: {spayed_neutered: true}
+    
+      })
+        .then(res => this.setState({animals:res.data,
+            type:"",
+   gender:"",
+   size:"",
+   spayed:""
+        }))
+        .catch(err => console.log(err));
 }
 
 
@@ -55,8 +73,20 @@ handleSubmit = (e)=>{ console.log(this.state)
                         </div>
                     
                 </form>
-                
+                <List>
+                {this.state.animals.map(pet => (
+                  <ListItem key={pet.id}>
+                    {/* <Link to={"/books/" + book._id}> */}
+                      <strong>
+                        {pet.description}
+                      </strong>
+                    {/* </Link> */}
+                    {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
+                  </ListItem>
+                ))}
+              </List>
             </div>
+      
         )
     }
 }
