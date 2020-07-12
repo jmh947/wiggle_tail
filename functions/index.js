@@ -28,7 +28,7 @@ exports.postCreated=functions.firestore.document('posts/{postId}').onCreate(doc=
 })
 
 
-exports.userJoine = functions.auth.user().onCreate(user=>{
+exports.userJoined = functions.auth.user().onCreate(user=>{
     return admin.firestore().collection('users').doc(user.uid).get().then(doc=>{
         const newUser = doc.data()
         const notification = {

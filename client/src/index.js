@@ -37,7 +37,8 @@ const rrfProps = {
   config: rrfConfig,
   dispatch: store.dispatch,
   createFirestoreInstance,
-  presence: 'presence'
+  presence: 'presence',
+  sessions: "sessions"
 
 }
 
