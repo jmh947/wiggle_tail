@@ -4,6 +4,16 @@ import "./style.css";
 
 
 function SearchSitter (props){
+    // state = {
+    //     zipcode: "85297"
+    // }
+
+    // handleInputChange = (e)=> {
+    //     console.log(e)
+    //     this.setState({
+    //         [e.target.id]:e.target.value
+    //     })
+    // }
 
     return(
         <div className = "container">
@@ -15,7 +25,7 @@ function SearchSitter (props){
                     </label>
 
                     <input 
-                        onChange = {props.handleInputChange}
+                        onChange = {props.handleInputChange}  //changed from handleInputChange
                         value = {props.search}
                         name = "search"
                         type = "text"
@@ -34,7 +44,7 @@ function SearchSitter (props){
                     
                     <a href ="/sittersignup">
                         <p
-                        // onClick = {props.handleFormSubmit}
+                        //onClick = {props.handleFormSubmit}
                         className = "sitter-signup btn btn-dark mt-3 mb-5"
                         > 
                         Sign Up To Be A Pet Sitter
