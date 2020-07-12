@@ -17,6 +17,27 @@ Sign Up Code Snippet
 <br>
 <img src="public/img/App_signup.png" width="500" height="650"/>
 
+Sign Up Gif
+<br>
+<img src="public/img/signUp.gif" width="750" height="550">
+
+Sign In Code Snippet
+<br>
+<img src="public/img/App_signIN.png" width="500" height="650"/>
+
+Creating a Post Code Snippet
+<br>
+<img src="public/img/Create_Post.png" width="500" height="650"/>
+
+Creating a Post Gif
+<br>
+<img src="public/img/postingboardgif.gif" width="800" height=""/>
+
+Pet Sitter Sign Up Gif
+<br>
+<img src="public/img/sitterSignUp2.gif" width="500" height="600"/>
+
+
 
  
 ---
