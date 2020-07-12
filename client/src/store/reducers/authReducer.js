@@ -17,7 +17,8 @@ switch(action.type){
             authError: null
         }
     case 'SIGNOUT_SUCCESS':
-        console.log('signou success')
+        console.log('signout success')
+        window.location.reload();
         return state 
     case 'SIGNUP_SUCCESS':
         console.log('signup success')
