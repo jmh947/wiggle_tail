@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import API from "../../utils/API";
+ import API from "../../utils/API";
 import { List, ListItem } from "../../components/List";
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { Redirect } from "react-router-dom"
 import Animals from "../Result"
+
+
  class petFinder1 extends Component {
+ 
      state = {
          animals:[],
          type:"",
@@ -21,18 +24,25 @@ handleChange = (e)=>{
        [e.target.id]:e.target.value
     })
 }
+
 handleSubmit = (e)=>{ console.log(this.state, "state")
+console.log(this.state, "state")
 e.preventDefault();
-API.getPetFinder({
+API.getPetFinder(
+
+  {
+    
     type: this.state.type, 
     gender: this.state.gender, 
     status: "adoptable", 
     size: this.state.size, 
     attributes: {spayed_neutered: true}
 
-  })
-    .then(res => 
-      // console.log(res.animals)
+  }
+  )
+
+  .then(res => 
+      // console.log(res.animals, "res animal")
       this.setState({animals:res.animals,
         type:"",
         gender:"",

@@ -26,6 +26,7 @@ export const signOut = ()=>{
     }
 }
 export const signUp = (newUser) => {
+  console.log(newUser,"new user")
     return (dispatch, getState, {getFirebase, getFirestore}) => {
       const firebase = getFirebase();
       const firestore = getFirestore();
@@ -35,8 +36,10 @@ export const signUp = (newUser) => {
         newUser.password
       ).then(resp => {
         return firestore.collection('users').doc(resp.user.uid).set({
+          
           firstName: newUser.firstName,
           lastName: newUser.lastName,
+        
           initials: `${newUser.firstName[0]}${newUser.lastName[0]}`
         });
       }).then(() => {

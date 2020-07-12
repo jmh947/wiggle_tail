@@ -7,14 +7,17 @@ module.exports = {
     // Get all pet info
     findAll: function(req,res) {
         console.log("Pet Finder");
-        client.animal.search({
+        client.animal.search(
+         
+            { 
             type: "Dog", 
-            gender: "Male", 
+            gender: "Female", 
             status: "adoptable", 
-            size: "Small", 
-            attributes: {spayed_neutered: true}})
+            size: "Large", 
+            attributes: {spayed_neutered: true}
+        }
             
-        .then(function (response) {
+        ).then(function (response) {
             res.json(response.data)
             // Do something with `response.data.animals`
         })
@@ -26,7 +29,6 @@ module.exports = {
     
 
 }
-
 
 
 
