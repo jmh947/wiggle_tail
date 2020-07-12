@@ -29,24 +29,26 @@ class SitterForm extends Component {
 
     handleSubmit = (e)=>{
         e.preventDefault();
-        console.log(this.state, "sitter")
+        console.log(this.state)
         //this.props.SitterForm(this.state)
+
         const sitter = {
-        firstName:this.state.firstName,
-        lastName:this.state.lastName,
-        sitterZipCode: this.state.sitterZipCode,
-        email: this.state.email,
-        phoneNumber: this.state.phoneNumber,
-        wage: this.state.wage,
-        description: this.state.description,
-        Boarding: this.state.Boarding,
-        Stay_at_home: this.state.Stay_at_home,
-        Walks: this.state.Walks,
-        Daycare: this.state.Daycare
+            firstName:this.state.firstName,
+            lastName:this.state.lastName,
+            sitterZipCode: this.state.sitterZipCode,
+            email: this.state.email,
+            phoneNumber: this.state.phoneNumber,
+            wage: this.state.wage,
+            description: this.state.description,
+            Boarding: this.state.Boarding,
+            Stay_at_home: this.state.Stay_at_home,
+            Walks: this.state.Walks,
+            Daycare: this.state.Daycare
 
         }
-    API.addPetSitterInfo (sitter).then(results=>{
-        console.log(results)
+        
+        API.addPetSitterInfo (sitter).then(results=>{
+            console.log(results)
     })
     }
 
@@ -67,15 +69,19 @@ class SitterForm extends Component {
                         </div>
                         <div className="input-field">
                             <label htmlFor="zipcode">Zipcode</label>
+                            <input type="number" id="zipcode" onChange={this.handleChange}/>
+                        </div>
+                        <div className="input-field">
+                            <label htmlFor="zipcode">Email</label>
                             <input type="text" id="zipcode" onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
                             <label htmlFor="phoneNumber">Phone Number</label>
-                            <input type="text" id="phoneNumber" onChange={this.handleChange}/>
+                            <input type="number" id="phoneNumber" onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
-                            <label htmlFor="wage">Wage</label>
-                            <input type="text" id="wage" onChange={this.handleChange}/>
+                            <label htmlFor="wage">Dollar per Hours</label>
+                            <input type="number" id="wage" onChange={this.handleChange}/>
                         </div>
                          <div className="input-field">
                             <label htmlFor="description">Description</label>
