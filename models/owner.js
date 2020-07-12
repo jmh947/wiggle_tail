@@ -7,7 +7,7 @@ const ownerProfile = new Schema ({
     userZipcode:{type: Number, required: true},
     hasPet: {type: Boolean, required: true},
 
-    Pet : [{ // One pet can have many photo
+    pet : [{ // One pet can have many photo
         type: Schema.Types.ObjectId, //foreign key from Pet model
         ref: "Pet" //Need to check the Pet model later
     }]

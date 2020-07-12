@@ -10,7 +10,11 @@ password:"",
 firstName:"",
 lastName:"",
 zipcode:"",
-hasPet:""
+hasPet:"",
+petName:"",
+petBreed:"",
+petAge:"",
+petColor:""
      }
 
 handleChange = (e)=>{
@@ -23,15 +27,32 @@ handleSubmit = (e)=>{
     e.preventDefault();
     console.log(this.state, "user")
     this.props.signUp(this.state)
-    const owner = {
+  
+    const pet ={
+        petName:this.state.petName,
+        petBreed:this.state.petBreed,
+petAge:this.state.petAge,
+petColor:this.state.petColor
+    }
+    API.addPet(pet).then(results=>{
+
+  const owner = {
         firstName:this.state.firstName,
 lastName:this.state.lastName,
 userZipcode:this.state.zipcode,
-hasPet:this.state.hasPet==="on" ? true:false
+hasPet:this.state.hasPet==="on" ? true:false,
+pet:results._id
     }
+console.log(results, "pet is added");
 API.addOwnerInfo (owner).then(results=>{
-    console.log(results)
+    console.log(results);
+  
 })
+    })
+
+
+
+
 
 }
 
@@ -63,6 +84,7 @@ API.addOwnerInfo (owner).then(results=>{
                             <label htmlFor="zipcode">Zipcode</label>
                             <input type="text" id="zipcode" onChange={this.handleChange}/>
                         </div>
+                    
                         <div className="input-field">
                         <p>
       <label>
@@ -71,6 +93,22 @@ API.addOwnerInfo (owner).then(results=>{
       </label>
     </p>
                            
+                        </div>
+                        <div className="input-field">
+                            <label htmlFor="petName">Pet Name</label>
+                            <input type="text" id="petName" onChange={this.handleChange}/>
+                        </div>
+                        <div className="input-field">
+                            <label htmlFor="petAge">Pet Age</label>
+                            <input type="text" id="petAge" onChange={this.handleChange}/>
+                        </div>
+                        <div className="input-field">
+                            <label htmlFor="petColor">Pet Color</label>
+                            <input type="text" id="petColor" onChange={this.handleChange}/>
+                        </div>
+                        <div className="input-field">
+                            <label htmlFor="petBreed">Pet Breed</label>
+                            <input type="text" id="petBreed" onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
                             <button className="btn pink lighten-1 z-depth-0">Sign Up</button>
