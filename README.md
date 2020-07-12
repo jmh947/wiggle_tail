@@ -13,7 +13,11 @@
 ---
 
 ## Code Snippets
-![Sign Up Code Snippet](App_signup.png)
+Sign Up Code Snippet
+<br>
+<img src="public/img/App_signup.png" width="500" height="650"/>
+
+
  
 ---
 ## Collaborators
