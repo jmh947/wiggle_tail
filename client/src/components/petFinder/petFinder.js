@@ -10,12 +10,11 @@ import Animals from "../Result"
      state = {
          animals:[],
          type:"",
-gender:"",
-size:"",
-spayed:""
+         gender:"",
+         size:"",
+         spayed:""
      }
 
-    
 handleChange = (e)=>{
     // console.log(e)
     this.setState({
@@ -25,7 +24,6 @@ handleChange = (e)=>{
 handleSubmit = (e)=>{ console.log(this.state, "state")
 e.preventDefault();
 API.getPetFinder({
-    
     type: this.state.type, 
     gender: this.state.gender, 
     status: "adoptable", 
@@ -37,9 +35,9 @@ API.getPetFinder({
       // console.log(res.animals)
       this.setState({animals:res.animals,
         type:"",
-gender:"",
-size:"",
-spayed:""
+        gender:"",
+        size:"",
+        spayed:""
     })
     )
     .catch(err => console.log(err));
