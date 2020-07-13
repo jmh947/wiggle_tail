@@ -1,5 +1,5 @@
 import React from "react";
-import SitterForm from "../SitterForm"
+// import SitterForm from "../SitterForm"
 import "./style.css";
 
 function SearchSitter (props){
