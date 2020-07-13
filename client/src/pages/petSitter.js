@@ -52,13 +52,16 @@ class petSitter extends React.Component {
 
         return (
             <div>
+                <div>
+                
                 <SearchSitter
                     search = {this.state.search}
                     handleInputChange = {this.handleInputChange}
                     handleFormSubmit = {this.handleFormSubmit} />
+                </div>
 
                 <div className = "container">
-                    <h2><b>Result</b></h2>
+                    <h2 style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}><b>Result</b></h2>
                     <SitterResult 
                         matchedPetSitters = {this.matchedPetSitters} 
                     />

@@ -11,6 +11,7 @@ import petFinder1 from './components/petFinder/petFinder';
 
 import petSitter from "./pages/petSitter";
 import SitterForm from "./components/Sitter/SitterForm"
+import Footer from "./components/Footer"
 
 
 
@@ -30,6 +31,8 @@ function App() {
    <Route path='/searchsitter' component ={petSitter} />
    <Route path='/sittersignup' component ={SitterForm} />
  </Switch>
+
+    <Footer/>
   
     </div>
 
