@@ -131,7 +131,7 @@ const sitterSeed = [
     email: "comedyking@gmail.com",
     phoneNumber: 4806587782,
     wage: 100,
-    description: "I will make your pets laught",
+    description: "I will make your pets laugh",
     Boarding: false,
     Stay_at_home: true,
     Walks: true,
