@@ -11,8 +11,13 @@ export default {
 
     //User login
     getOwnerInfo: function(id) {
-        return axios.get("/api/ownerprofile" + id)
+        return axios.get("/api/ownerprofile/" + id)
         .then(result => result.data);
+    },
+
+    //getUserZipcode
+    getZipcode : function(zipcode) {
+        return axios.get("/api/petsitterprofile/zipcode/" + zipcode).then(result => result.data);
     },
 
     // User add Pet
@@ -27,7 +32,7 @@ export default {
 
     // Delete a Pet
     deletePet: function(id) {
-        return axios.delete("/api/petprofile" + id).then(result => result.data);
+        return axios.delete("/api/petprofile/" + id).then(result => result.data);
 
     },
 
@@ -35,7 +40,6 @@ export default {
     addPetSitterInfo : function(sitterInfo) {
         return axios.post("/api/petsitterprofile", sitterInfo).then(result => result.data);
     },
-
     //get all pet sitter
     getAllPetSitter : function(sitterInfo) {
         return axios.get("/api/petsitterprofile")
@@ -43,12 +47,10 @@ export default {
 
         console.log("getting pet sitter")
     },
-
     // Get a pet sitter
     getAPetSitterInfo : function (id) {
         return axios.get("/api/petsitterprofile/" + id ).then(result => result.data);
     },
-
     //Remove a pet sitter
     removePetSitter : function(id) {
         return axios.delete("/api/petsitterprofile/" + id).then(result => result.data);
