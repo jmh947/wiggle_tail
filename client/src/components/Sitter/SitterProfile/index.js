@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import API from "../../../utils/API";
-import NavBar from "../../layout/Navbar"
-import Footer from "../../Footer"
 
 class SitterProfile extends Component {
 
@@ -20,11 +18,11 @@ class SitterProfile extends Component {
 
         return (
             <div>
-                <NavBar />
+             
                 <h3>
                     {this.state.sitterInfo}
                 </h3>
-                <Footer />
+                
             </div>
 
         )
