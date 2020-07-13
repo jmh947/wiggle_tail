@@ -13,17 +13,26 @@ class SitterForm extends Component {
         phoneNumber: "",
         wage: "",
         description: "",
-        Boarding: "",
-        Stay_at_home: "",
-        Walks: "",
-        Daycare: ""
+        Boarding: false,
+        Stay_at_home: false,
+        Walks: false,
+        Daycare: false
 
     }
 
     handleChange = (e)=> {
         console.log(e)
+        const {name, value} = e.target
+
+        // e.target{
+        //     name,
+        //     value
+        // }
+        // e.target.value
+        // e.target.name
+
         this.setState({
-            [e.target.id]:e.target.value
+             [name]: value  //lastName:lee
         })
     }
 
@@ -46,6 +55,7 @@ class SitterForm extends Component {
             Daycare: this.state.Daycare
 
         }
+        console.log(sitter)
         
         API.addPetSitterInfo (sitter).then(results=>{
             console.log(results)
@@ -61,35 +71,35 @@ class SitterForm extends Component {
                         
                         <div className="input-field">
                             <label htmlFor="firstName">First Name</label>
-                            <input type="text" id="firstName" onChange={this.handleChange}/>
+                            <input type="text" name="firstName" value= {this.state.firstName}  onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
                             <label htmlFor="lastName">Last Name</label>
-                            <input type="text" id="lastName" onChange={this.handleChange}/>
+                            <input type="text" name="lastName" value= {this.state.lastName}  onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
                             <label htmlFor="zipcode">Zipcode</label>
-                            <input type="number" id="zipcode" onChange={this.handleChange}/>
+                            <input type="number" name="sitterZipCode"  value= {this.state.sitterZipCode} onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
                             <label htmlFor="zipcode">Email</label>
-                            <input type="text" id="zipcode" onChange={this.handleChange}/>
+                            <input type="text" name="email" value= {this.state.email} onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
                             <label htmlFor="phoneNumber">Phone Number</label>
-                            <input type="number" id="phoneNumber" onChange={this.handleChange}/>
+                            <input type="number" name="phoneNumber" value= {this.state.phoneNumber}  onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
                             <label htmlFor="wage">Dollar per Hours</label>
-                            <input type="number" id="wage" onChange={this.handleChange}/>
+                            <input type="number" name="wage" value= {this.state.wage}  onChange={this.handleChange}/>
                         </div>
                          <div className="input-field">
                             <label htmlFor="description">Description</label>
-                            <input type="text" id="description" onChange={this.handleChange}/>
+                            <input type="text" name="description" value= {this.state.description}  onChange={this.handleChange}/>
                         </div>
                         {/* <div className="input-field">
                             <label htmlFor="boarding">Boarding</label>
-                            <input type="text" id="boarding" onChange={this.handleChange}/>
+                            <input type="text" name="boarding" onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
                             <label htmlFor="stay_at_home">Stay at home</label>
@@ -107,22 +117,22 @@ class SitterForm extends Component {
                         <div className="input-field">
     <p>
       <label>
-        <input type="checkbox" id="boarding" onChange={this.handleChange} />
+        <input type="checkbox" name="Boarding" value= {this.state.Boarding}  onChange={this.handleChange} />
         <span>Boarding</span>
       </label>
       <br/>
       <label>
-        <input type="checkbox" id="stay_at_home" onChange={this.handleChange} />
+        <input type="checkbox" name="Stay_at_home" value= {this.state.Stay_at_home}  onChange={this.handleChange} />
         <span>Stay at Owners Home</span>
       </label>
       <br/>
       <label>
-        <input type="checkbox" id="walks" onChange={this.handleChange} />
+        <input type="checkbox" name="Walks" value= {this.state.Walks} onChange={this.handleChange} />
         <span>Walks</span>
       </label>
       <br/>
       <label>
-        <input type="checkbox" id="daycare" onChange={this.handleChange} />
+        <input type="checkbox" name="Daycare" value= {this.state.Daycare}  onChange={this.handleChange} />
         <span>Daycare</span>
       </label>
       
@@ -131,7 +141,7 @@ class SitterForm extends Component {
                            
         </div>
                         <div className="input-field">
-                            <button className="btn orange lighten-1 z-depth-0">Sign Up to Sit</button>
+                            <button className="btn pink lighten-1 z-depth-0" onClick= {this.handleSubmit}>Sign Up to Sit</button>
                             <div className="red-text center">
                             </div>
                         </div>
