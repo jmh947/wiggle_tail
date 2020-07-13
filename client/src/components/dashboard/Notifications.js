@@ -6,12 +6,12 @@ const Notifications =(props)=>{
         <div className="section">
             <div className="card z-depth-0">
                 <div className="card-content">
-                    <span className="card-title">Notificaitons</span>
+                    <span className="card-title" style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"40px", marginBottom:"50px"}}>Notifications</span>
                     <ul className="notifications">
                       {notifications && notifications.map(item=>{
                           return (
                               <li key={item.id}>
-                                  <span className="pink-text">{item.user}  </span>
+                                  <span className="red-text">{item.user}  </span>
                                   <span>{item.content}</span>
                                   <div className="grey-text note-date">
                                       {moment(item.time.toDate()).fromNow()}

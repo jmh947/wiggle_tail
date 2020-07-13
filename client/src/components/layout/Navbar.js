@@ -14,11 +14,14 @@ const links = auth.uid ?  <SignedInLinks profile={profile}/>: <SignedOutLinks/>
         <nav className="nav-wrapper">
             <a href="/" className="brand-logo"><img className = "logo" src={image} /></a>
             
-            <div className="container">    
             
-                <Link to="/" className="brand-logo" style={{fontSize : "35px", fontFamily: "'Modak', cursive", color: "orange"}}>Wiggle Tails</Link>
+            <div className="container">   
+             
+            
+                {/* <Link to="#name" className="brand-logo" style={{fontSize : "20px", fontFamily: "'Modak', cursive", color: "grey"}}>Welcome to Wiggle Tail</Link> */}
             
                 {links}
+               
 
             </div>
       

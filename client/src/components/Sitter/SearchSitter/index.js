@@ -2,7 +2,6 @@ import React from "react";
 import SitterForm from "../SitterForm"
 import "./style.css";
 
-
 function SearchSitter (props){
     // state = {
     //     zipcode: "85297"
@@ -21,14 +20,14 @@ function SearchSitter (props){
                 <div className = "form-group">
                 {/* <form> */}
                     <label htmlFor = "search">
-                        <h2><b>Find You Pets a New Best Friend Through Our Trusted Pet Sitter Finder</b></h2>
+                        <h2 className="title" style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}><b>Find a Pet Sitter Near You</b></h2>
                     </label>
 
                     <input 
                         onChange = {props.handleInputChange}  //changed from handleInputChange
                         value = {props.search}
                         name = "search"
-                        type = "text"
+                        type = "number"
                         className = "form-control"
                         placeholder = "Enter Your Zipcode"
                         id = "searchZipcode"
@@ -36,16 +35,17 @@ function SearchSitter (props){
 
                     <button
                         onClick = {props.handleFormSubmit}
-                        className = "btn btn-dark mt-3 mb-5"
+                        className = "search btn orange lighten-1 z-depth-0"
                     > 
                     Search Your Area
                     </button>
+                    <br/>
 
                     
                     <a href ="/sittersignup">
                         <p
                         //onClick = {props.handleFormSubmit}
-                        className = "sitter-signup btn btn-dark mt-3 mb-5"
+                        className = "sitter-signup btn orange lighten-1 z-depth-0"
                         > 
                         Sign Up To Be A Pet Sitter
                         </p>
@@ -60,4 +60,7 @@ function SearchSitter (props){
     )
 }
 
+
+
 export default SearchSitter;
+  

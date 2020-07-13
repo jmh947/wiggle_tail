@@ -67,7 +67,7 @@ class SitterForm extends Component {
         return (
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
-                    <h5 className="grey-text text-darken-3">Sign Up to be a Pet Sitter</h5>
+                    <h5 className="grey-text text-darken-3" style={{color: "orange", fontFamily: "'Modak', cursive", fontSize:"40px"}}>Sign Up to be a Pet Sitter</h5>
                         
                         <div className="input-field">
                             <label htmlFor="firstName">First Name</label>
@@ -141,7 +141,11 @@ class SitterForm extends Component {
                            
         </div>
                         <div className="input-field">
+<<<<<<< HEAD
                             <button className="btn pink lighten-1 z-depth-0" onClick= {this.handleSubmit}>Sign Up to Sit</button>
+=======
+                            <button className="btn orange lighten-1 z-depth-0">Sign Up to Sit</button>
+>>>>>>> 3348bba733c4764e85fe96ad560627ebb810e0d0
                             <div className="red-text center">
                             </div>
                         </div>

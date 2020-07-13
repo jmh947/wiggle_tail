@@ -2,10 +2,7 @@ const db = require ("../models")
 const petfinder = require("@petfinder/petfinder-js");
 const client = new petfinder.Client({apiKey: "8ScIwFihGFvf3jaq4U3sSDiJUWZFonIwta4Sll2wL5p2tWhyHf", secret: "AtVyXheRFEYIcY63ghZcCQhDb7JmfJEQYvP1gLGq"});
 
-
 module.exports = {
-    
-    
 
     // Get all pet info
     findAll: function(req,res) {

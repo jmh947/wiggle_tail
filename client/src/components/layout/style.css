@@ -1,14 +1,12 @@
 .logo {
     display: inline-block;
-    height: 70%;
-    width: 70%;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
-.headline {
-    margin-top: 5px;
-    
-    
-}
+
 .logo>img {
     vertical-align: middle
 }
@@ -17,8 +15,13 @@
     width: 220px;
 }
 .nav-wrapper {
-    height: 150px;
-    background-color: #9e523fe7;
+    height: 420px;
+    background-image: url("../../img/dog.jpg");
+}
+
+.mission {
+    position: flex;
+    margin-top: 50px;
 }
 
 .right {
