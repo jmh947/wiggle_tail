@@ -20,6 +20,8 @@ function PostDetails(props) {
                     <div className="card-content">
                          <div className="card-title">{post.title}</div>
                             <p>{post.content}</p>
+                            <img src={post.imageUrl}
+            alt="Uploaded images" height="300" width="400"/>
                     </div>
 
                     <div className="card-action grey lighten-4 grey-text">

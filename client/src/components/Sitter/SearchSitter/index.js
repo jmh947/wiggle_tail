@@ -2,7 +2,6 @@ import React from "react";
 import SitterForm from "../SitterForm"
 import "./style.css";
 
-
 function SearchSitter (props){
     // state = {
     //     zipcode: "85297"
@@ -61,4 +60,7 @@ function SearchSitter (props){
     )
 }
 
+
+
 export default SearchSitter;
+  
