@@ -5,8 +5,9 @@ const petsitterApiRoutes = require("./petsitter-routes");
 const petFinderApiRoutes = require("./petFinderRoutes");
 
 // Owner Route
-router.use("/petfinder", petFinderApiRoutes);
 router.use("/ownerprofile", ownerApiRoutes);
+//Pet Finder Route
+router.use("/petfinder", petFinderApiRoutes);
 //Pet Route
 router.use("/petprofile", petApiRoutes)
 

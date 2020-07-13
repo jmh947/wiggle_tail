@@ -28,7 +28,7 @@ handleSubmit = (e)=>{
         return (
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
-                    <h5 className="grey-text text-darken-3">Create a New Post</h5>
+                    <h5 className=" text-darken-1" style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}>Create a New Post</h5>
                         <div className="input-field">
                             <label htmlFor="title">Title</label>
                             <input type="text" id="title" onChange={this.handleChange}/>
@@ -38,7 +38,7 @@ handleSubmit = (e)=>{
                             <textarea id="content" onChange={this.handleChange} className="materialize-textarea"></textarea>
                         </div>
                         <div className="input-field">
-                            <button className="btn pink lighten-1 z-depth-0">Create</button>
+                            <button className="btn orange lighten-1 z-depth-0">Create</button>
                         </div>
                     
                 </form>

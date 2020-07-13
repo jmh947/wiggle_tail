@@ -5,6 +5,7 @@ import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { Redirect } from "react-router-dom"
+import "./style.css";
 class Dashboard extends Component {
     render (){
         // console.log(this.props)
@@ -13,12 +14,13 @@ class Dashboard extends Component {
         return (
             <div className="dashboard container">
                 <div className="row">
-            <div className="col s12 m6">
-                <PostList posts={posts}/>
-            </div>
-            <div className="col s12 m5 offset-m1">
-               <Notifications notifications={notifications}/>
-            </div>
+                    <div className="post col s12 m6">
+                        <PostList posts={posts}/>
+                    </div>
+
+                    <div className="notification col s6 m5 offset-m1">
+                        <Notifications notifications={notifications}/>
+                    </div>
                 </div>
 
             </div>

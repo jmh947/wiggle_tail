@@ -1,12 +1,43 @@
 h2 {
     color:rgb(61, 61, 61);
-    background-color: rgb(233, 217, 196);
+    /*  background-color: rgb(233, 217, 196); */
+}
+
+form.white {
+    background-color: rgb(233, 217, 196) !important;
+}
+
+/* posting board create button and user circle */
+button.btn.pink {
+    background-color: orange !important;
+}
+
+.btn-floating.pink {
+    background-color: orange !important;
+}
+
+/* search sitter button */
+.btn.btn-dark {
+    background-color: orange !important;
 }
 
 #searchZipcode {
-    background-color: rgb(233, 217, 196);
+    /* background-color: rgb(233, 217, 196); */
+    text-align: center;
+    margin-top: 40px;
+} 
+
+.form-group {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-.sitter-signup {
+/* .sitter-signup {
     margin-left: 150px;
+    margin-top: 15px;
+} */
+
+.z-depth-0 {
+    background-color: rgb(233, 217, 196);
 }

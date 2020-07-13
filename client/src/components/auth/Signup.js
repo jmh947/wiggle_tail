@@ -3,6 +3,9 @@ import { Redirect} from "react-router-dom"
 import {connect} from "react-redux"
 import {signUp} from "../../store/actions/authActions"
 import API from "../../utils/API"
+import "./style.css"
+
+
  class SignUp extends Component {
      state = {
 email:"",
@@ -63,7 +66,7 @@ API.addOwnerInfo (owner).then(results=>{
         return (
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
-                    <h5 className="grey-text text-darken-3">Sign Up</h5>
+                    <h5 className="grey-text text-darken-3" style={{fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}>Sign Up</h5>
                         <div className="input-field">
                             <label htmlFor="email">Email</label>
                             <input type="email" id="email" onChange={this.handleChange}/>
@@ -111,7 +114,7 @@ API.addOwnerInfo (owner).then(results=>{
                             <input type="text" id="petBreed" onChange={this.handleChange}/>
                         </div>
                         <div className="input-field">
-                            <button className="btn pink lighten-1 z-depth-0">Sign Up</button>
+                            <button className="btn orange lighten-1 z-depth-0">Sign Up</button>
                             <div className="red-text center">
         { authError ? <p>{authError}</p> : null}
                             </div>
