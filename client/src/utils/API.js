@@ -40,7 +40,6 @@ export default {
     addPetSitterInfo : function(sitterInfo) {
         return axios.post("/api/petsitterprofile", sitterInfo).then(result => result.data);
     },
-
     //get all pet sitter
     getAllPetSitter : function(sitterInfo) {
         return axios.get("/api/petsitterprofile")
@@ -48,12 +47,10 @@ export default {
 
         console.log("getting pet sitter")
     },
-
     // Get a pet sitter
     getAPetSitterInfo : function (id) {
         return axios.get("/api/petsitterprofile/" + id ).then(result => result.data);
     },
-
     //Remove a pet sitter
     removePetSitter : function(id) {
         return axios.delete("/api/petsitterprofile/" + id).then(result => result.data);
