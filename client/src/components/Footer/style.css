@@ -1,0 +1,12 @@
+.footer{
+    background-color: black;
+    height: 400px;
+    color: grey;
+}
+
+.pups {
+    border-radius: 60%;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}

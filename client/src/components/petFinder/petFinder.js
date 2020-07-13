@@ -61,7 +61,7 @@ API.getPetFinder(
           
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
-                    <h5 className="grey-text text-darken-3">Pet Finder</h5>
+                    <h5 className=" text-darken-3" style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}><b>Pet Finder</b></h5>
 
 
                      
@@ -88,7 +88,7 @@ API.getPetFinder(
                            
                         </div>
                         <div className="input-field">
-                            <button className="btn pink lighten-1 z-depth-0">Find your pet!</button>
+                            <button className="btn orange lighten-1 z-depth-0">Find your pet!</button>
                         </div>
                     
                 </form>

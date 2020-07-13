@@ -1,12 +1,22 @@
 h2 {
     color:rgb(61, 61, 61);
-    background-color: rgb(233, 217, 196);
+    /*  background-color: rgb(233, 217, 196); */
 }
+
 
 #searchZipcode {
-    background-color: rgb(233, 217, 196);
+    /* background-color: rgb(233, 217, 196); */
+    text-align: center;
+    margin-top: 40px;
+} 
+
+.form-group {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-.sitter-signup {
+/* .sitter-signup {
     margin-left: 150px;
-}
+    margin-top: 15px;
+} */
