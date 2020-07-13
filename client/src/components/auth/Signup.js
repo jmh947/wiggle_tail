@@ -56,7 +56,6 @@ API.addOwnerInfo (owner).then(results=>{
 
 
 
-
 }
 
 
