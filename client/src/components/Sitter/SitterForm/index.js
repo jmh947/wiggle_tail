@@ -141,11 +141,7 @@ class SitterForm extends Component {
                            
         </div>
                         <div className="input-field">
-<<<<<<< HEAD
                             <button className="btn pink lighten-1 z-depth-0" onClick= {this.handleSubmit}>Sign Up to Sit</button>
-=======
-                            <button className="btn orange lighten-1 z-depth-0">Sign Up to Sit</button>
->>>>>>> 3348bba733c4764e85fe96ad560627ebb810e0d0
                             <div className="red-text center">
                             </div>
                         </div>
