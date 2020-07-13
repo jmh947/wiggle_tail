@@ -5,7 +5,10 @@ const firestore = getFirestore();
 const profile = getState().firebase.profile
 const authorId = getState().firebase.auth.uid
 firestore.collection('posts').add({
-    ...post,
+    // ...post,
+    title:post.title,
+    content:post.content,
+    imageUrl:post.url,
     authorFirstName: profile.firstName,
     authorLastName: profile.lastName,
     authorId: authorId,
