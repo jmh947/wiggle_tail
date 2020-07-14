@@ -64,7 +64,7 @@ class petSitter extends React.Component {
                 <div className = "container">
                     <h2 style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}><b>Result</b></h2>
                     <SitterResult 
-                        matchedPetSitters = {this.matchedPetSitters} 
+                        // matchedPetSitters = {this.matchedPetSitters} 
                     />
                 </div>
             </div>

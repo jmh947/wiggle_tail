@@ -27,8 +27,8 @@ class SearchSitter extends Component {
         this.getSitterZipcode();
     }  
 
-    getSitterZipcode (zipcode) {
-        API.getZipcode(zipcode).then(result => { console.log (result)})
+    getSitterZipcode () {
+        API.getZipcode().then(result => { console.log (result)})
     }
     
 

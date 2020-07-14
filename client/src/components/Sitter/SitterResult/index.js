@@ -5,9 +5,9 @@ import "./style.css"
 
 // import API from "../../../utils/API";
 
-// class SitterResult extends Component {
+class SitterResult extends Component {
 
-function SitterResult (props) {
+// function SitterResult (props) {
 //     //Initialize State
 //     constructor(props){
 //     super(props)
@@ -33,11 +33,13 @@ function SitterResult (props) {
     // }
     // }
 
+    render(){
         return(
             <div>
                  <p>Hello</p>
             </div>
         )
+    }
 }
 
 export default SitterResult;

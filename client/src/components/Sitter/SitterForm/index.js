@@ -24,17 +24,10 @@ class SitterForm extends Component {
     handleChange = (e)=> {
         console.log(e)
         const {name, value} = e.target
-
-        // e.target{
-        //     name,
-        //     value
-        // }
-        // e.target.value
-        // e.target.name
-
         this.setState({
              [name]: value  //lastName:lee
         })
+        
     }
 
     handleSubmit = (e)=>{
@@ -61,6 +54,7 @@ class SitterForm extends Component {
         API.addPetSitterInfo (sitter).then(results=>{
             console.log(results)
         })
+        alert("Thank You! You have been signed up as a pet sitter")
 
     }
 
@@ -140,6 +134,7 @@ class SitterForm extends Component {
                         {/* <Redirect to="/searchsitter"/> */}
                             Sign Up to Sit
                             </button>
+
                         <div className="red-text center">
                         </div>
                     </div>
