@@ -91,7 +91,7 @@ storage.ref('images').child(image.name).getDownloadURL().then(url=>{
                             <button className="btn orange lighten-1 z-depth-0">Create</button>
                         </div>
                 </form>
-                <form className="white-mod" style={style}>     <h5 className=" text-darken-1" style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"17px"}}>Add an image</h5>
+                <div className="white-mod" style={style}>     <h5 className=" text-darken-1" style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"17px"}}>Add an image</h5>
             <progress value={this.state.progress} max="100"/>
             <br/>
             <input type="file" onChange={this.handleImageChange} id="imageUpload"/>
@@ -99,7 +99,7 @@ storage.ref('images').child(image.name).getDownloadURL().then(url=>{
             <br/>
          
              <img src={this.state.url || "https://colpas.mouau.edu.ng/sites/colpas.mouau.edu.ng/files/default_images/placeholder1.png"} 
-            alt="Uploaded images" height="300" width="400"/> </form>
+            alt="Uploaded images" height="300" width="400"/> </div>
                         
             </div>
         )
