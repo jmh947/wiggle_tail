@@ -8,8 +8,8 @@ class petSitter extends React.Component {
         super(props)
 
         this.state = {
-
-            sitterZipCode : ""
+            values : "",
+            matchedPetSitters : []
         }
 
         // this.searchPetSitter = this.searchPetSitter.bind(this);
@@ -45,8 +45,7 @@ class petSitter extends React.Component {
 
          // Preventing the default behavior of the form submit (which is to refresh the page)
         e.preventDefault();
-        // this.searchPetSitter(this.state.search) // "search" is found as name in the sitterform.js
-        // API.getZipcode()
+        this.searchPetSitter(this.state.search) // "search" is found as name in the sitterform.js
     }
 
     render () {
@@ -56,7 +55,7 @@ class petSitter extends React.Component {
                 <div>
                 
                 <SearchSitter
-                    // search = {this.state.search}
+                    search = {this.state.search}
                     handleInputChange = {this.handleInputChange}
                     handleFormSubmit = {this.handleFormSubmit} />
                 </div>
