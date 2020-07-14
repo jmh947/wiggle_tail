@@ -3,6 +3,7 @@
 
 import React, { Component } from "react";
 import API from "../../../utils/API";
+import { Redirect} from "react-router-dom";
 
 class SitterForm extends Component {
     state = {
@@ -59,7 +60,8 @@ class SitterForm extends Component {
         
         API.addPetSitterInfo (sitter).then(results=>{
             console.log(results)
-    })
+        })
+
     }
 
 
@@ -67,7 +69,7 @@ class SitterForm extends Component {
         return (
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
-                    <h5 className="grey-text text-darken-3" style={{color: "orange", fontFamily: "'Modak', cursive", fontSize:"40px"}}>Sign Up to be a Pet Sitter</h5>
+                    <h5 className="grey-text text-darken-3"  style={{fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}>Sign Up to be a Pet Sitter</h5>
                         
                         <div className="input-field">
                             <label htmlFor="firstName">First Name</label>
@@ -97,48 +99,41 @@ class SitterForm extends Component {
                             <label htmlFor="description">Description</label>
                             <input type="text" name="description" value= {this.state.description}  onChange={this.handleChange}/>
                         </div>
-                        {/* <div className="input-field">
-                            <label htmlFor="boarding">Boarding</label>
-                            <input type="text" name="boarding" onChange={this.handleChange}/>
-                        </div>
+
                         <div className="input-field">
-                            <label htmlFor="stay_at_home">Stay at home</label>
-                            <input type="text" id="stay_at_home" onChange={this.handleChange}/>
-                        </div>
-                        <div className="input-field">
-                            <label htmlFor="walks">Walks</label>
-                            <input type="text" id="walks" onChange={this.handleChange}/>
-                        </div>
-                        <div className="input-field">
-                            <label htmlFor="daycare">Daycare</label>
-                            <input type="text" id="daycare" onChange={this.handleChange}/>
-                        </div> */}
-                       
-                        <div className="input-field">
-    <p>
-      <label>
-        <input type="checkbox" name="Boarding" value= {this.state.Boarding}  onChange={this.handleChange} />
-        <span>Boarding</span>
-      </label>
-      <br/>
-      <label>
-        <input type="checkbox" name="Stay_at_home" value= {this.state.Stay_at_home}  onChange={this.handleChange} />
-        <span>Stay at Owners Home</span>
-      </label>
-      <br/>
-      <label>
-        <input type="checkbox" name="Walks" value= {this.state.Walks} onChange={this.handleChange} />
-        <span>Walks</span>
-      </label>
-      <br/>
-      <label>
-        <input type="checkbox" name="Daycare" value= {this.state.Daycare}  onChange={this.handleChange} />
-        <span>Daycare</span>
-      </label>
+                            <p>
+                                <label>
+                                    <input type="checkbox" name="Boarding" value= {this.state.Boarding}  onChange={this.handleChange} />
+                                    <span>Boarding</span>
+                                </label>
+
+                                <br/>
+
+                                <label>
+                                    <input type="checkbox" name="Stay_at_home" value= {this.state.Stay_at_home}  onChange={this.handleChange} />
+                                    <span>Stay at Owners Home</span>
+                                </label>
+                                
+                                <br/>
+                                
+                                <label>
+                                    <input type="checkbox" name="Walks" value= {this.state.Walks} onChange={this.handleChange} />
+                                    <span>Walks</span>
+                                
+                                </label>
+                                
+                                <br/>
+                                
+                                <label>
+                                    <input type="checkbox" name="Daycare" value= {this.state.Daycare}  onChange={this.handleChange} />
+                                    <span>Daycare</span>
+                                
+                                </label>
       
 
-    </p>
+                            </p>
                            
+<<<<<<< HEAD
         </div>
                         <div className="input-field">
                             <button className="btn pink lighten-1 z-depth-0" onClick= {this.handleSubmit} >Sign Up to Sit</button>
@@ -146,171 +141,24 @@ class SitterForm extends Component {
                             </div>
 
 
+=======
+            </div>
+                        
+                    <div className="input-field">
+                        <button className="btn orange lighten-1 z-depth-0" onClick= {this.handleSubmit}>
+                        {/* <Redirect to="/searchsitter"/> */}
+                            Sign Up to Sit
+                            </button>
+                        <div className="red-text center">
+>>>>>>> ac8cadf8148f59d81b62383ecc51a0c880308057
                         </div>
+                    </div>
                     
                 </form>
                 
-            </div>
+        </div>
         )
     }
 }
 
-
-
-    //render see signup.js
-
-
-// }
-// import Checkbox from "../../checkboxes"
-
-// function SitterForm (props) {
-
-//     return(
-
-//         <div className = "container">
-//             <form>
-//                 {/* First name */}
-//                 <input
-//                     onChange = {props.handleInputChange}
-//                     value = {props.search} 
-//                     name = "fisrtname"
-//                     type = "text"
-//                     className = "form-control"
-//                     placeholder = "First Name"
-//                     id = "firstname"
-//                     /> 
-
-//                     {/* Last name */}
-//                 <input 
-//                     onChange = {props.handleInputChange}
-//                     value = {props.search} 
-//                     name = "lastname"
-//                     type = "text"
-//                     className = "form-control"
-//                     placeholder = "Last Name"
-//                     id = "lastname"
-//                     />
-//                 {/* Email */}
-//                 <input 
-//                     onChange = {props.handleInputChange}
-//                     value = {props.search} 
-//                     name = "email"
-//                     type = "text"
-//                     className = "form-control"
-//                     placeholder = "Email"
-//                     id = "email"
-//                     />
-
-//                 {/* Zipcode */}
-//                 <input 
-//                     onChange = {props.handleInputChange}
-//                     value = {props.search} 
-//                     name = "zipcode"
-//                     type = "text"
-//                     className = "form-control"
-//                     placeholder = "Zipcode"
-//                     id = "zipcode"
-//                 />
-
-//                 {/* Phone*/}
-//                 <input 
-//                     onChange = {props.handleInputChange}
-//                     value = {props.search} 
-//                     name = "phone"
-//                     type = "text"
-//                     className = "form-control"
-//                     placeholder = "Cell number"
-//                     id = "cellphone"
-//                     /> 
-
-//                 {/* Service Charge*/}
-//                 <input 
-//                     onChange = {props.handleInputChange}
-//                     value = {props.search} 
-//                     name = "charge"
-//                     type = "text"
-//                     className = "form-control"
-//                     placeholder = "Doller per hour"
-//                     id = "charge"
-//                     />
-//                 {/* Tell us about you */}
-//                 <input 
-//                     onChange = {props.handleInputChange}
-//                     value = {props.search} 
-//                     name = "aboutyou"
-//                     type = "text"
-//                     className = "form-control"
-//                     placeholder = "Tell us about you"
-//                     id = "aboutyou"
-//                     />
-                
-//                 {/* Options */}
-//                 {/* Boarding */}
-//                 <div className="form-check">
-                    
-//                     <input 
-//                     className="form-check-input" 
-//                     type="checkbox" 
-//                     value = {props.search}  
-//                     id="defaultCheck1"/>
-
-//                         <label className="form-check-label" for="defaultCheck1">
-//                         Boarding
-//                         </label>
-//                 </div> 
-
-//                 {/* Stay at home */}
-//                 <div className="form-check">
-//                     <input 
-//                     className="form-check-input" 
-//                     type="checkbox" 
-//                     value = {props.search}  
-//                     id="defaultCheck1"/>
-                    
-//                         <label className="form-check-label" for="defaultCheck1">
-//                         Stay at Home
-//                         </label>
-//                 </div>
-
-//                 {/* Walks */}
-//                 <div className="form-check">
-
-//                     <input 
-//                     className="form-check-input" 
-//                     type="checkbox" 
-//                     value = {props.search}  
-//                     id="defaultCheck1"/>
-
-//                         <label className="form-check-label" for="defaultCheck1">
-//                         Walks
-//                         </label>
-//                 </div>
-
-//                 {/* Daycare */}
-//                 <div className="form-check">
-
-//                     <input 
-//                     className="form-check-input" 
-//                     type="checkbox" 
-//                     value = {props.search} 
-//                     id="defaultCheck2"/>
-                    
-//                         <label className="form-check-label" for="defaultCheck2">
-//                         Daycare
-//                         </label>
-//                 </div>
-
-//                 {/* Submit Btn */}
-//                 <button 
-//                 type="submit" 
-//                 className="btn btn-primary"
-//                 onClick = {props.handleFormSubmit}>
-//                     Submit
-//                 </button>
-
-//             </form>
-//         </div>
-//     )
-
-// }
 export default SitterForm;

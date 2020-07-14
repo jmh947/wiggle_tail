@@ -122,7 +122,7 @@ const sitterSeed = [
     Stay_at_home: true,
     Walks: true,
     Daycare: true
-}
+},
 
 {
     firstName: "Will",
