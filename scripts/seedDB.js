@@ -10,110 +10,79 @@ mongoose.connect(
 
 const sitterSeed = [
     {
-    firstName: "Sandy",
-    lastName: "Beach",
-    sitterZipCode: 85297,
-    email: "sandybeaches@gmail.com",
-    phoneNumber: 4805546665,
-    wage: 44,
-    description: "Enjoy your day away without worry!",
-    Boarding: true,
-    Stay_at_home: true ,
-    Walks: true,
-    Daycare: false 
-
-
+        firstName: "Sandy",
+        lastName: "Beach",
+        zipCode: "85297",
+        email: "sandybeaches@gmail.com",
+        phoneNumber: "4805546665",
+        wage: "$15 an hour, $50 per night",
+        description: "Enjoy your day away without worry!"
 },
 
 {
     firstName: "Robyn",
     lastName: "Banks",
-    sitterZipCode: 85296,
+    zipCode: "85296",
     email: "robynbanks@yahoo.com",
-    phoneNumber: 4807894534,
-    wage: 13,
-    description: "Pet loving house with fenced yard ",
-    Boarding: false,
-    Stay_at_home: false,
-    Walks: true,
-    Daycare: true
-
+    phoneNumber: "(480)789-4534",
+    wage: "$13 an hour, $60 per night",
+    description: "Pet loving house with fenced yard "
 },
 
 {
     firstName: "Frank",
     lastName: "Ballpark",
-    sitterZipCode: 97701,
+    zipCode: "97701",
     email: "ballparkfranks@aol.com",
-    phoneNumber: 5414365556,
-    wage: 30,
-    description: "Big or small I love them all",
-    Boarding: true,
-    Stay_at_home: true,
-    Walks: true,
-    Daycare: true
+    phoneNumber: "(541)436-5556",
+    wage: "$10 an hour, $60 per night",
+    description: "Big or small I love them all"
 },
 
 {
     firstName: "Ben",
     lastName: "Dover",
-    sitterZipCode: 85297,
+    zipCode: "85297",
     email: "bendover@yahoo.com",
-    phoneNumber: 6024567773,
-    wage: 17,
-    description: "Dependable and home all day",
-    Boarding: false,
-    Stay_at_home: true,
-    Walks: false,
-    Daycare: true
+    phoneNumber: "(602)456-7773",
+    wage: "$17 an hour, $35 per night",
+    description: "Dependable and home all day"
 },
 
 {
     firstName: "Anita",
     lastName: "Bath",
-    sitterZipCode: 85296,
+    zipCode: "85296",
     email: "anitabath@gmail.com",
-    phoneNumber: 6025569990,
-    wage: 18,
-    description: "Responsible pal for furry friends",
-    Boarding: false,
-    Stay_at_home: false,
-    Walks: false,
-    Daycare: false
+    phoneNumber: "(602) 556-9990",
+    wage: "$18 an hour, $40 per night",
+    description: "Responsible pal for furry friends"
 },
 
 {
     firstName: "Ally",
     lastName: "Gater",
-    sitterZipCode: 97701,
+    zipCode: "97701",
     email: "allygater@yahoo.com",
-    phoneNumber: 5413436576,
-    wage: 14,
-    description: "Your pet's vacation starts here",
-    Boarding: true,
-    Stay_at_home: true,
-    Walks: false,
-    Daycare: false
+    phoneNumber: "(541)343-6576",
+    wage: "$14 an hour, $32 per night",
+    description: "Your pet's vacation starts here"
 },
 
 {
     firstName: "Joe",
     lastName: "King",
-    sitterZipCode: 85296,
+    zipCode: "",
     email: "joeking@yahoo.com",
-    phoneNumber: 6026678889,
-    wage: 22,
-    description: "I work from home and would love some company",
-    Boarding: false,
-    Stay_at_home: true,
-    Walks: true,
-    Daycare: false
+    phoneNumber: "(602) 667-8889",
+    wage: "$22 an hour, $70 per night",
+    description: "I work from home and would love some company"
 },
 
 {
     firstName: "Jack",
     lastName: "Pott",
-    sitterZipCode: 85297,
+    zipCode: "",
     email: "jackpott@gmail.com",
     phoneNumber: 4806559992,
     wage: 10,
@@ -150,6 +119,7 @@ const sitterSeed = [
     Stay_at_home: false,
     Walks: true,
     Daycare: false
+
 }
 
 ]

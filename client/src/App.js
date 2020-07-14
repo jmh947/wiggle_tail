@@ -9,11 +9,10 @@ import CreatePost from './components/posts/CreatePost';
 
 import petFinder1 from './components/petFinder/petFinder';
 
-import petSitter from "./pages/petSitter";
+import SearchSitter from './components/Sitter/SearchSitter'
 import SitterForm from "./components/Sitter/SitterForm"
 import Footer from "./components/Footer"
-import SitterProfile from "./components/Sitter/SitterProfile"
-import ownerProfile from "./components/Owner/Profile"
+
 
 
 function App() {
@@ -29,10 +28,8 @@ function App() {
    <Route path='/createpost' component={CreatePost} />
    <Route path='/petfinder1' component={petFinder1} />
 
-   <Route path='/searchsitter' component ={petSitter} />
+   <Route path='/searchsitter' component ={SearchSitter } />
    <Route path='/sittersignup' component ={SitterForm} />
-   <Route path='/sitterprofile' component ={SitterProfile} /> 
-   <Route path='/ownerprofile' component ={ownerProfile} /> 
  </Switch>
 
     <Footer/>
