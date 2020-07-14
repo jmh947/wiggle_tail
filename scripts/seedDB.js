@@ -84,9 +84,42 @@ const sitterSeed = [
     lastName: "Pott",
     zipCode: "",
     email: "jackpott@gmail.com",
-    phoneNumber: "(480) 655-9992",
-    wage: "$10 an hour, $45 per night",
-    description: "Full-time animal lover"
+    phoneNumber: 4806559992,
+    wage: 10,
+    description: "Full-time animal lover",
+    Boarding: false,
+    Stay_at_home: true,
+    Walks: true,
+    Daycare: true
+},
+
+{
+    firstName: "Will",
+    lastName: "Farrell",
+    sitterZipCode: 85296,
+    email: "comedyking@gmail.com",
+    phoneNumber: 4806587782,
+    wage: 100,
+    description: "I will make your pets laugh",
+    Boarding: false,
+    Stay_at_home: true,
+    Walks: true,
+    Daycare: false
+},
+
+{
+    firstName: "Brittney",
+    lastName: "Spears",
+    sitterZipCode: 97701,
+    email: "itsBrittney@gmail.com",
+    phoneNumber: 4806559992,
+    wage: 20,
+    description: "I promise I won't hit your baby one more time",
+    Boarding: false,
+    Stay_at_home: false,
+    Walks: true,
+    Daycare: false
+
 }
 
 ]
