@@ -14,10 +14,10 @@ export default {
         return axios.get("/api/ownerprofile" + id)
         .then(result => result.data);
     },
-    
+
     //getUserZipcode
     getZipcode : function(zipcode) {
-        return axios.get("/api/petsitterprofile/zipcode/" + zipcode).then(result => result.data);
+        return axios.get("/api/petsitterprofile/zipcode/" + zipcode);
     },
 
     // User add Pet
