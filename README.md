@@ -1,4 +1,7 @@
 # Wiggle Tail
+https://jmh947.github.io/wiggle_tail/.
+
+
 ### One stop shop for your four-legged friends
  This is an app that creates a platform for a community of pet lovers to interact. 
  - On this app you will be able to Sign up and create an account
@@ -64,7 +67,3 @@ Pet Sitter Sign Up Gif
 - React JS
 - Redux
 ---
-
-
-
-https://jmh947.github.io/wiggle_tail/.

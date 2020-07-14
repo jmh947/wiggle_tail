@@ -15,6 +15,11 @@ export default {
         .then(result => result.data);
     },
 
+    //getUserZipcode
+    getZipcode : function(zipcode) {
+        return axios.get("/api/petsitterprofile/zipcode/" + zipcode);
+    },
+
     // User add Pet
     addPet: function(petInfo) {
         return axios.post("/api/petprofile", petInfo).then(result => result.data);
