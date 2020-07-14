@@ -3,75 +3,76 @@ import API from "../utils/API";
 import SearchSitter from "../components/Sitter/SearchSitter";
 import SitterResult from "../components/Sitter/SitterResult";
 
-class petSitter extends React.Component {
-    constructor(props) {
-        super(props)
+// class petSitter extends React.Component {
+//     constructor(props) {
+//         super(props)
 
-        this.state = {
-            values : "",
-            matchedPetSitters : []
-        }
+//         this.state = {
 
-        // this.searchPetSitter = this.searchPetSitter.bind(this);
-    }
+//             sitterZipCode : ""
+//         }
 
-    componentDidMount () {
-        API.getAllPetSitter().then(sitterInfo => 
-            console.log(sitterInfo)
-            // this.setState({ matchedPetSitters : sitterInfo})
-        )
-        .catch(err => console.log(err))
-    }
+//         // this.searchPetSitter = this.searchPetSitter.bind(this);
+//     }
 
-    // seachPetSitter = () => { // Need to apply filter to find the sitters with matching zipcode
-    //     API.getAllPetSitter()
-    //     .then(sitterInfo => this.setState({ matchedPetSitters : sitterInfo})
-    //     )
-    //     .catch(err => console.log(err))
-    // }
+//     componentDidMount () {
+//         API.getAllPetSitter().then(sitterInfo => 
+//             console.log(sitterInfo)
+//             // this.setState({ matchedPetSitters : sitterInfo})
+//         )
+//         .catch(err => console.log(err))
+//     }
 
-    // Handle Input
-    handleInputChange = e => {
-        // Getting the value and name of the input which triggered the change
-        const name = e.target.name;
-        const value = e.target.value;
-        // Updating the input's state
-        this.setState( {
-            [name] : value
-        })
-    }
+//     // seachPetSitter = () => { // Need to apply filter to find the sitters with matching zipcode
+//     //     API.getAllPetSitter()
+//     //     .then(sitterInfo => this.setState({ matchedPetSitters : sitterInfo})
+//     //     )
+//     //     .catch(err => console.log(err))
+//     // }
 
-    handleFormSubmit = e => {
+//     // Handle Input
+//     handleInputChange = e => {
+//         // Getting the value and name of the input which triggered the change
+//         const name = e.target.name;
+//         const value = e.target.value;
+//         // Updating the input's state
+//         this.setState( {
+//             [name] : value
+//         })
+//     }
 
-         // Preventing the default behavior of the form submit (which is to refresh the page)
-        e.preventDefault();
-        this.searchPetSitter(this.state.search) // "search" is found as name in the sitterform.js
-    }
+//     handleFormSubmit = e => {
 
-    render () {
+//          // Preventing the default behavior of the form submit (which is to refresh the page)
+//         e.preventDefault();
+//         // this.searchPetSitter(this.state.search) // "search" is found as name in the sitterform.js
+//         // API.getZipcode()
+//     }
 
-        return (
-            <div>
-                <div>
+//     render () {
+
+//         return (
+//             <div>
+//                 <div>
                 
-                <SearchSitter
-                    search = {this.state.search}
-                    handleInputChange = {this.handleInputChange}
-                    handleFormSubmit = {this.handleFormSubmit} />
-                </div>
+//                 <SearchSitter
+//                     // search = {this.state.search}
+//                     handleInputChange = {this.handleInputChange}
+//                     handleFormSubmit = {this.handleFormSubmit} />
+//                 </div>
 
-                <div className = "container">
-                    <h2 style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}><b>Result</b></h2>
-                    <SitterResult 
-                        matchedPetSitters = {this.matchedPetSitters} 
-                    />
-                </div>
-            </div>
-        )
-    }
+//                 <div className = "container">
+//                     <h2 style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}><b>Result</b></h2>
+//                     {/* <SitterResult 
+//                         matchedPetSitters = {this.matchedPetSitters} 
+//                     /> */}
+//                 </div>
+//             </div>
+//         )
+//     }
 
-}
-export default petSitter;
+// }
+// export default petSitter;
 
 
 
