@@ -9,15 +9,10 @@ module.exports = {
         console.log("Pet Finder");
         client.animal.search(
          
-            { 
-            type: "Dog", 
-            gender: "Female", 
-            status: "adoptable", 
-            size: "Large", 
-            attributes: {spayed_neutered: true}
-        }
+           req.body
             
         ).then(function (response) {
+            console.log(response.data)
             res.json(response.data)
             // Do something with `response.data.animals`
         })

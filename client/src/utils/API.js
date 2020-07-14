@@ -17,7 +17,8 @@ export default {
 
     //getUserZipcode
     getZipcode : function(zipcode) {
-        return axios.get("/api/petsitterprofile/zipcode/" + zipcode);
+        console.log("/api/petsitterprofile/zipcode/"+ zipcode)
+        return axios.get("/api/petsitterprofile/zipcode/"+ zipcode);
     },
 
     // User add Pet
@@ -62,7 +63,7 @@ export default {
    //fetch pet finder api infos
     //fetch pet finder api info
     getPetFinder : function(petSearch) {
-        return axios.get("/api/petfinder", {params:petSearch}).then(result => result.data);
+        return axios.post("/api/petfinder", petSearch).then(result => result.data);
     }
 
 
