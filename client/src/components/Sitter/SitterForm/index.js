@@ -56,7 +56,7 @@ class SitterForm extends Component {
         console.log(sitter)
         
         API.addPetSitterInfo (sitter).then(results=>{
-            console.log(results)
+            window.location.href='/'
         })
 
     }
