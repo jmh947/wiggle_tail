@@ -8,17 +8,17 @@ import Gill from "../../img/gill.jpg"
 const Footer = (props) => {
     return (
         <div className = "footer">
-            <div class="footer-copyright text-center py-3">
+            <div class="col l6 s12">
                 <strong style={{color: "orange", fontFamily: "'Modak', cursive", fontSize: "25px" }}>Wiggle Tails</strong> by
                     <a href="https://github.com/ngavu2712" style={{color: "white"}}> Anna Vu |</a>
                     <a href="https://github.com/teslacats7776" style={{color: "white"}}> Christina Tarango |</a>
                     <a href="https://github.com/jmh947" style={{color: "white"}}> Jaclyn Hardy</a>
             </div>
-            <div class="footer-copyright text-center py-3">
+            <div class="col l6 s12">
                 <strong>Accompanied</strong> by our loving pups: Happy, Milo, Fin, Nellie and Gill
             </div>
 
-            <div class="footer-copyright text-center py-3">
+            <div class="col l6 s12">
                 <img className ="pups" src={Anna} />
                 <img className ="pups" src={Milo} />
                 <img className ="pups" src={Fin} />

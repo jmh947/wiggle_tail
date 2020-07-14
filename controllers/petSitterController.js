@@ -15,15 +15,22 @@ findById: function(req,res) {
     db.Sitter
     .findById(req.params.id)
     .then(dbSitter => res.json(dbSitter))
-    .catch(err => status(422).json(err))
+    .catch(err => res.status(422).json(err))
 },
 
 findByZipcode : function(req,res) {
-    db.Sitter
-    .find({sitterZipCode : req.params.zipcode})
-    .then(dbSitter => res.json(dbSitter))
-    .catch(err => status(422).json(err))
-},
+    db.Sitter.find({sitterZipCode : parseInt(req.params.zipcode)})
+    .then(dbSitter => res.json(dbSitter)) 
+    .catch(err => res.status(422).json(err))
+    
+}
+    // db.Sitter
+    // .find({sitterZipCode : req.params.zipcode})
+    // .then(dbSitter => res.json(dbSitter))
+    // .catch(err => status(422).json(err))
+,
+
+
 
 // Get all pet sitter info
 findAll: function(req,res) {

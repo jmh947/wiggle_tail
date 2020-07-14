@@ -7,7 +7,7 @@ const petController = require("../../controllers/petFinderController")
 router.route("/")
 //Server request to insert owner data to the database
 
-.get(petController.findAll)
+.post(petController.findAll)
 
  
 
