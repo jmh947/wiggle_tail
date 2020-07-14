@@ -28,8 +28,8 @@ exports.postCreated=functions.firestore.document('posts/{postId}').onCreate(doc=
 })
 
 
-exports.userJoined = functions.auth.user().onCreate(user=>{
-    return admin.firestore().collection('users').doc(user.uid).get().then(doc=>{
+exports.userJoined = functions.auth.user().onCreate(async user=>{
+    return await admin.firestore().collection('users').doc(user.uid).get().then(doc=>{
         const newUser = doc.data()
         const notification = {
             content: 'Joined the Pawty',

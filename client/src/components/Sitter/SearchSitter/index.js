@@ -1,14 +1,16 @@
 import React, {Component} from "react";
-import API from "../../../utils/API"
+import API from '../../../utils/API';
 // import SitterForm from "../SitterForm"
 import "./style.css";
+import Sitters from '../SitterResult'
 
 class SearchSitter extends Component {
-
-    state = {
-        sitterZipCode : ""
-    }
-
+    
+    
+       state= {
+            sitters:[],
+            sitterZipCode : ""
+        }
     handleInputChange = (e)=> {
         console.log(e)
         const {name, value} = e.target
@@ -21,15 +23,19 @@ class SearchSitter extends Component {
         e.preventDefault();
         console.log(this.state)
 
-        const zipcode =  {sitterZipCode: this.state.sitterZipCode}
+         const zipcode = ( {zipcode:this.state.sitterZipCode})
         console.log(zipcode);
-        
-        this.getSitterZipcode();
+
+        API.getAllPetSitter().then(res => 
+             console.log (res)
+            //  this.setState({sitters:res.sitters,
+            //     sitterZipCode : ""
+            // })
+            ) .catch(err => console.log(err));
+     
     }  
 
-    getSitterZipcode (zipcode) {
-        API.getZipcode(zipcode).then(result => { console.log (result)})
-    }
+   
     
 
     render () {
@@ -75,6 +81,14 @@ class SearchSitter extends Component {
             
                             </div>
                         </form>
+                        <div className="card-content grey-text text-darken-3">
+          {this.state.sitters.length>0 ? this.state.sitters.map(sitter=>{
+            return (
+                <Sitters sitter={sitter} />
+            )
+          }):"search not found"}
+  
+        </div>
                     </div>
                 )
     }

@@ -1,44 +1,35 @@
-import React, { Component } from "react";
-import { petSitter } from "../../../pages/petSitter";
-import "./style.css"
-//import Sitter from "../../../../../models/sitter";
+import React, { Component } from 'react'
+import API from "../../../utils/API";
+export class Sitters extends Component {
+    constructor(props) {
+        super(props)
+    }
 
-// import API from "../../../utils/API";
 
-// class SitterResult extends Component {
+    render() {
 
-function SitterResult (props) {
-//     //Initialize State
-//     constructor(props){
-//     super(props)
-//     this.state ={
-//         petSitter : []
-        
-//     }
-// }
+        return (
 
-    // // Render the data from the API request
-    // componentDidMount () {
-    //     API.getAllPetSitter()
-    //     .then(sitterInfo => this.setState({ petSitter: sitterInfo})
-    //     )
-    //     .catch(err => console.log(err))
-    // }
+            <div className="card mb-3" key={this.props.sitter.sitterZipCode}>
+                <div className="row">
 
-    // matchedPetSitters () => {
-    //     API.getZipcode()
-    //     .then(zipcode => this.setState({ zipcode : sitterInfo})
-    //     )
-    //     .catch(err => console.log(err))
-    // }
-    // }
+                    <div class="col s6">  
+                       
 
-        return(
-            <div>
-                 <p>Hello</p>
+                    <div class="col s6">
+                        <div className="card-body">
+                            <h5 className="card-title"> {this.props.sitter.firstName}</h5>
+                            <p className="card-text"> {this.props.sitter.lastName}</p>
+
+                           
+                        </div>
+                    </div>
+                </div>
             </div>
+
+</div>
         )
+    }
 }
 
-export default SitterResult;
-
+export default Sitters
