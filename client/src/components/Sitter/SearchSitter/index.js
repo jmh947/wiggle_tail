@@ -8,7 +8,7 @@ class SearchSitter extends Component {
     
     
        state= {
-            sitters:[],
+            sittersArray:[],
             sitterZipCode : ""
         }
     handleInputChange = (e)=> {
@@ -23,14 +23,13 @@ class SearchSitter extends Component {
         e.preventDefault();
         console.log(this.state)
 
-        const zipcode = ( {zipcode:this.state.sitterZipCode})
-        console.log(zipcode, "zipcode");
-        alert("alert")
-        API.getZipcode(zipcode).then(result => 
+      
+        // alert("alert")
+        API.getZipcode(this.state.sitterZipCode).then(result => {
              console.log (result.data,"sitter")
-            //  this.setState({sitters:res.sitters,
-            //     sitterZipCode : ""
-            // })
+             this.setState({sittersArray:result.data})
+        }
+           
             ) .catch(err => console.log(err));
      
     }  
@@ -39,8 +38,11 @@ class SearchSitter extends Component {
     
 
     render () {
+
         return(
+            
                     <div className = "container">
+                        {console.log(this.state.sittersArray,"sitter array")}
                         <form>
                             <div className = "form-group">
                             {/* <form> */}
@@ -82,7 +84,7 @@ class SearchSitter extends Component {
                             </div>
                         </form>
                         <div className="card-content grey-text text-darken-3">
-          {this.state.sitters.length>0 ? this.state.sitters.map(sitter=>{
+          {this.state.sittersArray.length>0 ? this.state.sittersArray.map(sitter=>{
             return (
                 <Sitters sitter={sitter} />
             )
