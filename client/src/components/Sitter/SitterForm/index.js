@@ -30,6 +30,7 @@ class SitterForm extends Component {
     handleSubmit = (e)=>{
         e.preventDefault();
         console.log(this.state)
+        
         //this.props.SitterForm(this.state)
 
         const sitter = {
@@ -49,7 +50,11 @@ class SitterForm extends Component {
         
         API.addPetSitterInfo (sitter).then(results=>{
             console.log(results)
-    })
+
+        }) 
+        alert("Thank you! You are now signed up to be a pet sitter") 
+
+
     }
 
 
@@ -129,16 +134,22 @@ class SitterForm extends Component {
 
     </p>
                            
-        </div>
-                        <div className="input-field">
-                            <button className="btn orange lighten-1 z-depth-0">Sign Up to Sit</button>
-                            <div className="red-text center">
-                            </div>
+
+                                
+            </div>
+                        
+                    <div className="input-field">
+                        <button className="btn orange lighten-1 z-depth-0" onClick= {this.handleSubmit}>
+                        {/* <Redirect to="/searchsitter"/> */}
+                            Sign Up to Sit
+                            </button>
+                        <div className="red-text center">
                         </div>
+                    </div>
                     
                 </form>
                 
-            </div>
+        </div>
         )
     }
 }
