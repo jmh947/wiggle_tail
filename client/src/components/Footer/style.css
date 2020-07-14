@@ -2,7 +2,6 @@
     background-color: black;
     height: 400px;
     color: grey;
-    border-top: grey;
 }
 
 .pups {
@@ -10,5 +9,4 @@
     width: 100px;
     height: 100px;
     margin: 10px;
-    
 }

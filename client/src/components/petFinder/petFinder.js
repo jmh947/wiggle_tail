@@ -61,7 +61,7 @@ API.getPetFinder(
           
             <div className="container">
                 <form className="white" onSubmit={this.handleSubmit}>
-                    <h5 className=" text-darken-3" style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}><b>Adoption</b></h5>
+                    <h5 className=" text-darken-3" style={{color: "black", fontFamily: "'Leckerli One', cursive", fontSize:"50px"}}><b>Pet Finder</b></h5>
 
 
                      
