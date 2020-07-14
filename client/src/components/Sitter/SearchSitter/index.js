@@ -26,7 +26,7 @@ class SearchSitter extends Component {
          const zipcode = ( {zipcode:this.state.sitterZipCode})
         console.log(zipcode);
 
-        API.getAllPetSitter().then(res => 
+        API.getZipcode().then(res => 
              console.log (res)
             //  this.setState({sitters:res.sitters,
             //     sitterZipCode : ""

@@ -2,7 +2,7 @@ const db = require ("../models")
 
 module.exports = {
     
-   // Pet sitter Input
+// Pet sitter Input
    create : function(req, res) {
     console.log(req.body)
     db.Sitter
@@ -14,6 +14,13 @@ module.exports = {
 findById: function(req,res) {
     db.Sitter
     .findById(req.params.id)
+    .then(dbSitter => res.json(dbSitter))
+    .catch(err => status(422).json(err))
+},
+
+findByZipcode : function(req,res) {
+    db.Sitter
+    .find({sitterZipCode : req.params.zipcode})
     .then(dbSitter => res.json(dbSitter))
     .catch(err => status(422).json(err))
 },
