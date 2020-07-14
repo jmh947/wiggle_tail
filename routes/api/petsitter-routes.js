@@ -16,9 +16,6 @@ router.route("/:id")
 .delete(petSitterController.remove)
 //Server request to remove the pet 
 .put(petSitterController.update)
-
-router.route("/zipcode/:zipcode")
-.get(petSitterController.findByZipcode)
   
  module.exports = router;
 
