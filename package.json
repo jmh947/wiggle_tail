@@ -22,7 +22,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@petfinder/petfinder-js": "^1.0.6",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "moment": "^2.27.0",
